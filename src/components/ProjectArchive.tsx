@@ -3,6 +3,8 @@ import { ArrowUpRight } from 'lucide-react';
 import Reveal from './Reveal';
 import { useLanguage } from '../context/LanguageContext';
 import { getMoreProjects } from '../data/moreProjects';
+import type { MoreProject } from '../data/moreProjects';
+import ProjectModal from './ProjectModal';
 
 // Lista compacta tipo "archivo" con todos los demás proyectos.
 // En escritorio muestra una vista previa de la captura al pasar el mouse.
@@ -11,6 +13,7 @@ const ProjectArchive = () => {
   const es = language === 'es';
   const projects = getMoreProjects(language);
   const [hovered, setHovered] = useState<number | null>(null);
+  const [selected, setSelected] = useState<MoreProject | null>(null);
   const [pos, setPos] = useState({ x: 0, y: 0 });
 
   return (
@@ -30,15 +33,13 @@ const ProjectArchive = () => {
         onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
         onMouseLeave={() => setHovered(null)}
       >
-        {projects.map((p, i) => {
-          const link = p.links.live || p.links.github || p.links.resources;
-          const Row = link ? 'a' : 'div';
-          return (
-            <Row
+        {projects.map((p, i) => (
+            <button
+              type="button"
               key={p.title}
-              {...(link ? { href: link, target: '_blank', rel: 'noopener noreferrer' } : {})}
+              onClick={() => setSelected(p)}
               onMouseEnter={() => setHovered(i)}
-              className="group grid grid-cols-12 items-center gap-3 py-4 sm:py-5 border-b border-paper/20 hover:bg-violet hover:text-ink hover:px-3 transition-all duration-300"
+              className="group grid grid-cols-12 items-center gap-3 w-full text-left py-4 sm:py-5 border-b border-paper/20 hover:bg-violet hover:text-ink hover:px-3 transition-all duration-300"
             >
               <span className="col-span-2 sm:col-span-1 font-mono text-xs text-paper/50 group-hover:text-ink">
                 {String(i + 1).padStart(2, '0')}
@@ -51,11 +52,10 @@ const ProjectArchive = () => {
               </span>
               <span className="col-span-10 col-start-3 sm:col-start-auto sm:col-span-2 flex items-center justify-between sm:justify-end gap-3 tag text-paper/60 group-hover:text-ink">
                 {p.period.replace(/\s*\(.*\)/, '')}
-                {link && <ArrowUpRight size={16} className="transition-transform group-hover:rotate-45" />}
+                <ArrowUpRight size={16} className="transition-transform group-hover:rotate-45" />
               </span>
-            </Row>
-          );
-        })}
+            </button>
+        ))}
       </div>
 
       {/* Vista previa flotante */}
@@ -67,6 +67,8 @@ const ProjectArchive = () => {
           <img src={projects[hovered].image} alt="" className="w-full h-full object-cover" />
         </div>
       )}
+
+      <ProjectModal project={selected} onClose={() => setSelected(null)} />
 
       <Reveal className="mt-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
         <p className="font-serif italic text-3xl">{t('projects.more.text')}</p>

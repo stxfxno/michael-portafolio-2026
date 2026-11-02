@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SectionTitle from './SectionTitle';
@@ -6,10 +7,13 @@ import Footer from './Footer';
 import Reveal from './Reveal';
 import { useLanguage } from '../context/LanguageContext';
 import { getMoreProjects } from '../data/moreProjects';
+import type { MoreProject } from '../data/moreProjects';
+import ProjectModal from './ProjectModal';
 
 const MoreProjects = () => {
   const { t, language } = useLanguage();
 
+  const [selected, setSelected] = useState<MoreProject | null>(null);
   const additionalProjects = getMoreProjects(language);
 
   return (
@@ -32,7 +36,7 @@ const MoreProjects = () => {
           <div className="border-b border-paper/20">
             {additionalProjects.map((project, index) => (
               <Reveal key={index}>
-                <article className="group grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 py-12 border-t border-paper/20">
+                <article onClick={() => setSelected(project)} className="group cursor-pointer grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 py-12 border-t border-paper/20">
                   <div className="lg:col-span-5 relative">
                     <div className="aspect-[16/10] overflow-hidden border border-paper/15">
                       <img
@@ -50,7 +54,9 @@ const MoreProjects = () => {
                       <span className="font-display text-5xl leading-none outline-violet group-hover:text-violet transition-colors">
                         {String(index + 1).padStart(2, '0')}.
                       </span>
-                      <h3 className="flex-1 font-display uppercase text-4xl leading-[0.95]">{project.title}</h3>
+                      <h3 className="flex-1 font-display uppercase text-4xl leading-[0.95]">
+                        <button type="button" onClick={() => setSelected(project)} className="text-left">{project.title}</button>
+                      </h3>
                       {project.inactive && (
                         <span className="tag border border-paper/40 px-2 py-1">
                           {project.inactiveNote ?? (language === 'es' ? 'Inactivo' : 'Inactive')}
@@ -63,17 +69,17 @@ const MoreProjects = () => {
 
                     <div className="flex flex-wrap gap-6">
                       {project.links.live && (
-                        <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="link-arrow">
+                        <a href={project.links.live} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="link-arrow">
                           {project.viewnow ? t('projects.viewnow') : t('projects.demo')} <ArrowUpRight size={14} />
                         </a>
                       )}
                       {project.links.github && (
-                        <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="link-arrow">
+                        <a href={project.links.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="link-arrow">
                           {t('projects.repository')} <ArrowUpRight size={14} />
                         </a>
                       )}
                       {project.links.resources && (
-                        <a href={project.links.resources} target="_blank" rel="noopener noreferrer" className="link-arrow">
+                        <a href={project.links.resources} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="link-arrow">
                           {t('projects.resources')} <ArrowUpRight size={14} />
                         </a>
                       )}
@@ -85,6 +91,7 @@ const MoreProjects = () => {
           </div>
         </div>
       </section>
+      <ProjectModal project={selected} onClose={() => setSelected(null)} />
       <Footer />
     </div>
   );
