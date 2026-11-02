@@ -107,6 +107,17 @@ const es: MoreProject[] = [
     }
   },
   {
+    title: "Eemerson Sac Web",
+    description: "Página web corporativa para Eemerson SAC, empresa de transporte especializada en el traslado de todo tipo de contenedores, con más de 15 años de trayectoria en el sector logístico peruano.",
+    period: "2025 (octubre)",
+    technologies: ["React", "TypeScript", "Tailwind"],
+    image: "/images/eemersonsac_web.webp",
+    viewnow: true,
+    links: {
+      live: "https://eemersonsac.com/"
+    }
+  },
+  {
     title: "StefWare",
     description: "Directorio para descubrir y compartir sitios, apps y herramientas creadas por jóvenes desarrolladores, con perfiles y comunidad.",
     period: "2025 (agosto)",
@@ -333,6 +344,17 @@ const en: MoreProject[] = [
     image: "/images/pixelcheck.webp",
     links: {
       live: "http://pixel-check-app.netlify.app/"
+    }
+  },
+  {
+    title: "Eemerson Sac Web",
+    description: "Corporate website for Eemerson SAC, a transport company specializing in handling all types of containers, with over 15 years of experience in the Peruvian logistics sector.",
+    period: "2025 (October)",
+    technologies: ["React", "TypeScript", "Tailwind"],
+    image: "/images/eemersonsac_web.webp",
+    viewnow: true,
+    links: {
+      live: "https://eemersonsac.com/"
     }
   },
   {

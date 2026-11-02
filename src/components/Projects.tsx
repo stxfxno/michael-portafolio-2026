@@ -113,17 +113,6 @@ const Projects = () => {
       }
     },
     {
-      title: "Eemerson Sac Web",
-      description: "Página web corporativa para Eemerson SAC, empresa de transporte especializada en el traslado de todo tipo de contenedores, con más de 15 años de trayectoria en el sector logístico peruano.",
-      period: "Octubre 2025",
-      technologies: ["React", "TypeScript", "Tailwind"],
-      image: "/images/eemersonsac_web.webp",
-      viewnow: true,
-      links: {
-        live: "https://eemersonsac.com/"
-      }
-    },
-    {
       title: "PayBox — Eemerson SAC",
       description: "Plataforma web de gestión operativa para empresa de transporte de carga. Centraliza pagos a conductores (exportable a Excel), flota GPS vía Navitel, integración SUNAT OAuth para GRE, alertas de vencimientos sincronizadas con Odoo ERP, y un portal móvil-first para conductores con OCR y registro de gastos.",
       period: "Nov 2025 - Feb 2026",
@@ -169,17 +158,6 @@ const Projects = () => {
       viewnow: true,
       links: {
         live: "https://sprinta.ai/landing"
-      }
-    },
-    {
-      title: "Eemerson Sac Web",
-      description: "Corporate website for Eemerson SAC, a transport company specializing in handling all types of containers, with over 15 years of experience in the Peruvian logistics sector.",
-      period: "October 2025",
-      technologies: ["React", "TypeScript", "Tailwind"],
-      image: "/images/eemersonsac_web.webp",
-      viewnow: true,
-      links: {
-        live: "https://eemersonsac.com/"
       }
     },
     {
