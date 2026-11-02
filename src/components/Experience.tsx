@@ -63,27 +63,19 @@ const Experience = () => {
 
   const experiences: ExperienceItem[] = [
     {
-      titleKey: "experience.job5.title",
-      companyKey: "experience.job5.company",
-      periodKey: "experience.job5.period",
-      descriptionKeys: ["experience.job5.desc1"],
-      type: 'fulltime',
-      current: false,
-    },
-    {
-      titleKey: "experience.job1.title",
-      companyKey: "experience.job1.company",
-      periodKey: "experience.job1.period",
-      descriptionKeys: ["experience.job1.desc1", "experience.job1.desc2"],
-      type: 'fulltime',
-      current: false,
-    },
-    {
       titleKey: "experience.job4.title",
       companyKey: "experience.job4.company",
       periodKey: "experience.job4.period",
       descriptionKeys: ["experience.job4.desc1", "experience.job4.desc2", "experience.job4.desc3"],
       type: 'freelance',
+      current: true,
+    },
+    {
+      titleKey: "experience.job1.title",
+      companyKey: "experience.job1.company",
+      periodKey: "experience.job1.period",
+      descriptionKeys: ["experience.job1.desc0", "experience.job1.desc1", "experience.job1.desc2"],
+      type: 'fulltime',
       current: false,
     },
     {

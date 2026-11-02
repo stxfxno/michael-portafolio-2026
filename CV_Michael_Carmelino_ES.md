@@ -32,19 +32,19 @@ Español (nativo) • Inglés (avanzado)
 
 **EXPERIENCIA PROFESIONAL**
 
+EEMERSON SAC — Lima, Perú
+**Ingeniero de Software** | Oct 2025 – Presente
+
+- Desarrollé una plataforma de gestión operativa (Next.js 14 + Supabase) con pagos a conductores exportables a Excel, flota GPS vía Navitel y portal móvil-first con OCR automático para registro de gastos.
+- Integré la API de SUNAT vía OAuth para descarga de GRE y guías de remisión electrónicas, reduciendo el trabajo manual del equipo administrativo.
+- Integré la API de Odoo ERP para sincronización automática de alertas de vencimientos documentarios e implementé cron jobs para la automatización periódica de datos.
+
 SPRINTA AI — Lima, Perú
-**Ingeniero de Software** | Ene 2026 – Jun 2026
-**Desarrollador Full Stack** | Feb 2025 – Oct 2025
+**Ingeniero de Software** | Feb 2025 – Jun 2026
+_Desarrollador Full Stack: Feb 2025 – Oct 2025 · Ingeniero de Software: Ene 2026 – Jun 2026_
 
 - Desarrollé y mantuve la plataforma web utilizando React, TypeScript y Supabase, implementando nuevas funcionalidades para el agente de IA de ventas por WhatsApp.
 - Colaboré en la optimización del CRM integrado, mejorando los flujos de gestión de leads y el rendimiento general de la aplicación.
-
-EEMERSON SAC — Lima, Perú
-**Desarrollador Full Stack (Freelance)** | Oct 2025 – Feb 2026
-
-- Desarrollé PayBox (Next.js 14 + Supabase): plataforma de gestión operativa con pagos a conductores exportables a Excel, flota GPS vía Navitel y portal móvil-first con OCR automático para registro de gastos.
-- Integré la API de SUNAT vía OAuth para descarga de GRE y guías de remisión electrónicas, reduciendo el trabajo manual del equipo administrativo.
-- Integré la API de Odoo ERP para sincronización automática de alertas de vencimientos documentarios e implementé cron jobs para la automatización periódica de datos.
 
 FREELANCE — Lima, Perú
 **Desarrollador Web** | Oct 2024 – Presente
