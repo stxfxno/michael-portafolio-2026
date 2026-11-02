@@ -177,7 +177,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Wko Negocios",
-    category: "test",
+    category: "client",
     description: "Landing page para WKO Negocios, empresa peruana que conecta a sus clientes con las mejores soluciones de conectividad: planes de internet de alta velocidad y dispositivos móviles de última generación.",
     period: "2026 (marzo)",
     technologies: ["React", "TypeScript", "Tailwind"],
@@ -450,7 +450,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Wko Negocios",
-    category: "test",
+    category: "client",
     description: "Landing page for WKO Negocios, a Peruvian company connecting customers with the best connectivity solutions: high-speed internet plans and the latest mobile devices.",
     period: "2026 (March)",
     technologies: ["React", "TypeScript", "Tailwind"],
