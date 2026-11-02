@@ -7,6 +7,7 @@ import Footer from './Footer';
 import Reveal from './Reveal';
 import { useLanguage } from '../context/LanguageContext';
 import { getMoreProjects } from '../data/moreProjects';
+import { categoryLabel } from '../data/moreProjects';
 import type { MoreProject } from '../data/moreProjects';
 import ProjectModal from './ProjectModal';
 
@@ -57,6 +58,7 @@ const MoreProjects = () => {
                       <h3 className="flex-1 font-display uppercase text-4xl leading-[0.95]">
                         <button type="button" onClick={() => setSelected(project)} className="text-left">{project.title}</button>
                       </h3>
+                      <span className="tag bg-violet text-ink px-2 py-1">{categoryLabel(project.category, language)}</span>
                       {project.inactive && (
                         <span className="tag border border-paper/40 px-2 py-1">
                           {project.inactiveNote ?? (language === 'es' ? 'Inactivo' : 'Inactive')}

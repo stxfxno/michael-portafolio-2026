@@ -33,7 +33,8 @@ Español (nativo) • Inglés (avanzado)
 **EXPERIENCIA PROFESIONAL**
 
 SPRINTA AI — Lima, Perú
-**Desarrollador Full Stack** | Feb 2025 – Jun 2026
+**Ingeniero de Software** | Ene 2026 – Jun 2026
+**Desarrollador Full Stack** | Feb 2025 – Oct 2025
 
 - Desarrollé y mantuve la plataforma web utilizando React, TypeScript y Supabase, implementando nuevas funcionalidades para el agente de IA de ventas por WhatsApp.
 - Colaboré en la optimización del CRM integrado, mejorando los flujos de gestión de leads y el rendimiento general de la aplicación.

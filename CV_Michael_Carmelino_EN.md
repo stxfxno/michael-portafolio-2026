@@ -33,7 +33,8 @@ Spanish (native) • English (advanced)
 **PROFESSIONAL EXPERIENCE**
 
 SPRINTA AI — Lima, Peru
-**Full Stack Developer** | Feb 2025 – Jun 2026
+**Software Engineer** | Jan 2026 – Jun 2026
+**Full Stack Developer** | Feb 2025 – Oct 2025
 
 - Developed and maintained the web platform using React, TypeScript, and Supabase, implementing new features for the AI-powered WhatsApp sales agent.
 - Collaborated on optimizing the integrated CRM, improving lead management workflows and overall application performance.
