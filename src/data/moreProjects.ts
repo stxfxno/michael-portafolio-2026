@@ -8,6 +8,7 @@ export interface MoreProject {
   image: string;
   viewnow?: boolean;
   inactive?: boolean;
+  inactiveNote?: string; // texto de la etiqueta de inactivo
   links: {
   live?: string;
   github?: string;
@@ -98,8 +99,9 @@ const es: MoreProject[] = [
     description: "Detector de imágenes generadas por IA: subes una imagen y un modelo de Machine Learning determina si fue creada por inteligencia artificial.",
     period: "2025 (noviembre)",
     technologies: ["Machine Learning", "Web"],
+    inactive: true,
+    inactiveNote: "Inactivo · Proyecto universitario",
     image: "/images/pixelcheck.webp",
-    viewnow: true,
     links: {
       live: "http://pixel-check-app.netlify.app/"
     }
@@ -109,8 +111,9 @@ const es: MoreProject[] = [
     description: "Directorio para descubrir y compartir sitios, apps y herramientas creadas por jóvenes desarrolladores, con perfiles y comunidad.",
     period: "2025 (agosto)",
     technologies: ["Web", "Comunidad"],
+    inactive: true,
+    inactiveNote: "Solo vista · Sin inicio de sesión",
     image: "/images/stefware.webp",
-    viewnow: true,
     links: {
       live: "http://stefware.netlify.app/"
     }
@@ -131,8 +134,9 @@ const es: MoreProject[] = [
     description: "Landing page para WKO Negocios, empresa peruana que conecta a sus clientes con las mejores soluciones de conectividad: planes de internet de alta velocidad y dispositivos móviles de última generación.",
     period: "2026 (marzo)",
     technologies: ["React", "TypeScript", "Tailwind"],
+    inactive: true,
+    inactiveNote: "Prueba · No se concretó",
     image: "/images/wkonegocios_web.webp",
-    viewnow: true,
     links: {
       live: "https://wko-negocios-landing.vercel.app/"
     }
@@ -142,8 +146,9 @@ const es: MoreProject[] = [
     description: "Aplicación web full-stack con sistema completo de mensajería en tiempo real entre usuarios, soportando interfaces intuitivas para la comunicación instantánea y gestión de contactos.",
     period: "2025 (febrero)",
     technologies: ["React", "NestJS", "Supabase", "TypeScript", "WebSockets"],
-    image: "/images/chat_app_platform.webp",
     inactive: true,
+    inactiveNote: "Inactivo · Solo se ve el login",
+    image: "/images/chat_app_platform.webp",
     links: {
       live: "https://chat-platform-stefdev.netlify.app/login",
       github: "https://github.com/stxfxno/chat-platform"
@@ -162,10 +167,11 @@ const es: MoreProject[] = [
   },
   {
     title: "Una Distancia Corta",
-    description: "Actualmente en desarrollo para V2. Aplicación web para parejas o amigos a distancia que permite compartir imágenes con ubicación y fecha en un mapa global, facilitando la conexión entre personas en diferentes partes del mundo.",
+    description: "Aplicación web para parejas o amigos a distancia que permite compartir imágenes con ubicación y fecha en un mapa global, facilitando la conexión entre personas en diferentes partes del mundo.",
     period: "2025 (enero-febrero)",
     technologies: ["HTML", "CSS", "JavaScript", "Firebase", "Mi novia"],
     inactive: true,
+    inactiveNote: "Inactivo · Ya no funciona",
     image: "/images/una_distancia_corta.webp",
     links: {
       live: "https://unadistanciacorta.netlify.app/",
@@ -322,8 +328,9 @@ const en: MoreProject[] = [
     description: "AI-generated image detector: upload an image and a Machine Learning model determines whether it was created by artificial intelligence.",
     period: "2025 (November)",
     technologies: ["Machine Learning", "Web"],
+    inactive: true,
+    inactiveNote: "Inactive · University project",
     image: "/images/pixelcheck.webp",
-    viewnow: true,
     links: {
       live: "http://pixel-check-app.netlify.app/"
     }
@@ -333,8 +340,9 @@ const en: MoreProject[] = [
     description: "Directory to discover and share websites, apps and tools created by young developers, with profiles and a community.",
     period: "2025 (August)",
     technologies: ["Web", "Comunidad"],
+    inactive: true,
+    inactiveNote: "View only · Login disabled",
     image: "/images/stefware.webp",
-    viewnow: true,
     links: {
       live: "http://stefware.netlify.app/"
     }
@@ -355,8 +363,9 @@ const en: MoreProject[] = [
     description: "Landing page for WKO Negocios, a Peruvian company connecting customers with the best connectivity solutions: high-speed internet plans and the latest mobile devices.",
     period: "2026 (March)",
     technologies: ["React", "TypeScript", "Tailwind"],
+    inactive: true,
+    inactiveNote: "Test · Never launched",
     image: "/images/wkonegocios_web.webp",
-    viewnow: true,
     links: {
       live: "https://wko-negocios-landing.vercel.app/"
     }
@@ -366,8 +375,9 @@ const en: MoreProject[] = [
     description: "Full-stack web application with a complete real-time messaging system between users, supporting intuitive interfaces for instant communication and contact management.",
     period: "2025 (February)",
     technologies: ["React", "NestJS", "Supabase", "TypeScript", "WebSockets"],
-    image: "/images/chat_app_platform.webp",
     inactive: true,
+    inactiveNote: "Inactive · Login screen only",
+    image: "/images/chat_app_platform.webp",
     links: {
       live: "https://chat-platform-stefdev.netlify.app/login",
       github: "https://github.com/stxfxno/chat-platform"
@@ -386,10 +396,11 @@ const en: MoreProject[] = [
   },
   {
     title: "A Short Distance",
-    description: "Currently under development for V2. Web application for long-distance couples or friends that allows sharing images with location and date on a global map, facilitating connection between people in different parts of the world.",
+    description: "Web application for long-distance couples or friends that allows sharing images with location and date on a global map, facilitating connection between people in different parts of the world.",
     period: "2025 (January-February)",
     technologies: ["HTML", "CSS", "JavaScript", "Firebase", "My girlfriend"],
     inactive: true,
+    inactiveNote: "Inactive · No longer working",
     image: "/images/una_distancia_corta.webp",
     links: {
       live: "https://unadistanciacorta.netlify.app/",

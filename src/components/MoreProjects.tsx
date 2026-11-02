@@ -53,7 +53,7 @@ const MoreProjects = () => {
                       <h3 className="flex-1 font-display uppercase text-4xl leading-[0.95]">{project.title}</h3>
                       {project.inactive && (
                         <span className="tag border border-paper/40 px-2 py-1">
-                          {language === 'es' ? 'Inactivo · Costos de producción' : 'Inactive · Production costs'}
+                          {project.inactiveNote ?? (language === 'es' ? 'Inactivo' : 'Inactive')}
                         </span>
                       )}
                     </div>
