@@ -113,23 +113,12 @@ const Projects = () => {
       }
     },
     {
-      title: "PayBox — Eemerson SAC",
+      title: "Plataforma — Eemerson SAC",
       description: "Plataforma web de gestión operativa para empresa de transporte de carga. Centraliza pagos a conductores (exportable a Excel), flota GPS vía Navitel, integración SUNAT OAuth para GRE, alertas de vencimientos sincronizadas con Odoo ERP, y un portal móvil-first para conductores con OCR y registro de gastos.",
       period: "Nov 2025 - Feb 2026",
       technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind", "shadcn/ui"],
       image: "/images/eemersonsac_plataforma.webp",
       links: {}
-    },
-    {
-      title: "Renaceris Web",
-      description: "Página web para una clínica de estética y salud con 3 sedes en Perú (Lima, Huánuco y Pucallpa). Presenta tratamientos especializados como rinoplastia, lipoescultura y más, con un diseño moderno y elegante.",
-      period: "Febrero 2026",
-      technologies: ["React", "TypeScript", "Tailwind"],
-      image: "/images/renaceris_web.png",
-      viewnow: true,
-      links: {
-        live: "https://www.renaceris.com/"
-      }
     },
     {
       title: "Renaceris Plataforma",
@@ -161,23 +150,12 @@ const Projects = () => {
       }
     },
     {
-      title: "PayBox — Eemerson SAC",
+      title: "Platform — Eemerson SAC",
       description: "Operational management web platform for a freight transport company. Centralizes driver payments (exportable to Excel), GPS fleet tracking via Navitel, SUNAT OAuth integration for e-invoices, document expiry alerts synced with Odoo ERP, and a mobile-first driver portal with OCR and expense tracking.",
       period: "Nov 2025 - Feb 2026",
       technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind", "shadcn/ui"],
       image: "/images/eemersonsac_plataforma.webp",
       links: {}
-    },
-    {
-      title: "Renaceris Web",
-      description: "Website for an aesthetic and health clinic with 3 locations across Peru (Lima, Huánuco, and Pucallpa). Showcases specialized treatments such as rhinoplasty, liposculpture, and more, with a modern and elegant design.",
-      period: "February 2026",
-      technologies: ["React", "TypeScript", "Tailwind"],
-      image: "/images/renaceris_web.png",
-      viewnow: true,
-      links: {
-        live: "https://www.renaceris.com/"
-      }
     },
     {
       title: "Renaceris Plataforma",

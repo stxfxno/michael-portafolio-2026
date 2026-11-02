@@ -107,6 +107,17 @@ const es: MoreProject[] = [
     }
   },
   {
+    title: "Renaceris Web",
+    description: "Página web para una clínica de estética y salud con 3 sedes en Perú (Lima, Huánuco y Pucallpa). Presenta tratamientos especializados como rinoplastia, lipoescultura y más, con un diseño moderno y elegante.",
+    period: "2026 (febrero)",
+    technologies: ["React", "TypeScript", "Tailwind"],
+    image: "/images/renaceris_web.png",
+    viewnow: true,
+    links: {
+      live: "https://www.renaceris.com/"
+    }
+  },
+  {
     title: "Eemerson Sac Web",
     description: "Página web corporativa para Eemerson SAC, empresa de transporte especializada en el traslado de todo tipo de contenedores, con más de 15 años de trayectoria en el sector logístico peruano.",
     period: "2025 (octubre)",
@@ -344,6 +355,17 @@ const en: MoreProject[] = [
     image: "/images/pixelcheck.webp",
     links: {
       live: "http://pixel-check-app.netlify.app/"
+    }
+  },
+  {
+    title: "Renaceris Web",
+    description: "Website for an aesthetic and health clinic with 3 locations across Peru (Lima, Huánuco, and Pucallpa). Showcases specialized treatments such as rhinoplasty, liposculpture, and more, with a modern and elegant design.",
+    period: "2026 (February)",
+    technologies: ["React", "TypeScript", "Tailwind"],
+    image: "/images/renaceris_web.png",
+    viewnow: true,
+    links: {
+      live: "https://www.renaceris.com/"
     }
   },
   {
