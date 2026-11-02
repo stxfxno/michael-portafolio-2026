@@ -12,6 +12,7 @@ interface Project {
   primaryLanguage?: string;
   image: string;
   viewnow?: boolean;
+  fullColor?: boolean; // sin filtro en blanco y negro
   links: {
     live?: string;
     github?: string;
@@ -33,7 +34,7 @@ const ProjectRow = ({ project, index }: { project: Project; index: number }) => 
             src={project.image}
             alt={`Captura de ${project.title}`}
             loading="lazy"
-            className="photo w-full h-full object-cover group-hover:scale-105"
+            className={`${project.fullColor ? '' : 'photo'} w-full h-full object-cover transition-transform duration-700 group-hover:scale-105`}
           />
         </div>
         <div className={`absolute -bottom-3 ${flip ? '-left-3' : '-right-3'} w-1/2 h-5 bg-violet origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500`} />
@@ -147,6 +148,7 @@ const Projects = () => {
       period: "Ene - Abr 2026",
       technologies: ["React", "NestJS", "TypeScript", "Tailwind", "Supabase"],
       image: "/images/renaceris_plataforma.webp",
+      fullColor: true,
       links: {}
     },
   ] : [
@@ -205,6 +207,7 @@ const Projects = () => {
       period: "Jan - Apr 2026",
       technologies: ["React", "NestJS", "TypeScript", "Tailwind", "Supabase"],
       image: "/images/renaceris_plataforma.webp",
+      fullColor: true,
       links: {}
     },
   ];
