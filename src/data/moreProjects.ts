@@ -1,6 +1,18 @@
 // Proyectos adicionales, compartidos entre la página principal (archivo) y /more-projects
+export type ProjectCategory = 'university' | 'personal' | 'test' | 'own' | 'thesis' | 'client';
+
+export const categoryLabel = (c: ProjectCategory, language: 'es' | 'en') => ({
+  university: { es: 'Universitario', en: 'University' },
+  personal: { es: 'Personal', en: 'Personal' },
+  test: { es: 'Prueba / validación', en: 'Test / validation' },
+  own: { es: 'Negocio propio', en: 'Own business' },
+  thesis: { es: 'Tesis universitaria', en: 'University thesis' },
+  client: { es: 'Cliente', en: 'Client' },
+}[c][language]);
+
 export interface MoreProject {
   title: string;
+  category: ProjectCategory;
   description: string;
   period: string;
   technologies: string[];
@@ -19,6 +31,7 @@ export interface MoreProject {
 const es: MoreProject[] = [
   {
     title: "Compañero Digital 3D",
+    category: "personal",
     description: "Tu cuarto, tu avatar, tu momento. Una habitación 3D editable con un avatar de vóxeles que muestra la actividad que eliges compartir (trabajando, leyendo, jugando, meditando…) y un enlace para que otros te vean.",
     period: "2026 (octubre)",
     technologies: ["React", "Three.js", "React Three Fiber", "Vite"],
@@ -30,6 +43,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Hora Real",
+    category: "personal",
     description: "Calculadora que muestra cuánto vale realmente una hora de tu vida: con tu sueldo, tus horas de trabajo, los traslados y los gastos laborales incluidos.",
     period: "2026 (octubre)",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -41,6 +55,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Git Wrapped",
+    category: "personal",
     description: "Tu año en GitHub en 5 tarjetas. Escribes cualquier usuario, sin registro, y descubres su personalidad dev.",
     period: "2026 (octubre)",
     technologies: ["Next.js", "GitHub"],
@@ -52,6 +67,7 @@ const es: MoreProject[] = [
   },
   {
     title: "HapticLearn",
+    category: "thesis",
     description: "Panel de una app que ayuda a niñas y niños con discapacidad visual a trazar letras y números con el dedo, guiados por vibraciones y voz. Pensada para colegios inclusivos del Perú y compatible con TalkBack.",
     period: "2026 (septiembre)",
     technologies: ["Vite", "Accesibilidad", "TalkBack"],
@@ -63,6 +79,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Tapy",
+    category: "own",
     description: "Plataforma NFC/QR para conseguir reseñas de Google al instante. Un toque y el cliente llega a tu página con tus redes, catálogo y WhatsApp.",
     period: "2026 (julio)",
     technologies: ["Next.js", "NFC", "QR"],
@@ -74,6 +91,7 @@ const es: MoreProject[] = [
   },
   {
     title: "AssetFlow Pro",
+    category: "personal",
     description: "Herramienta frontend que convierte SVG e imágenes (PNG, JPG, WEBP, HEIC, GIF…) en código listo para React, Vue, Angular o Astro, con paleta de colores dominantes y utilidades de conversión.",
     period: "2026 (marzo)",
     technologies: ["Frontend tooling", "SVG", "Imágenes"],
@@ -85,6 +103,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Portafolio estilo Facebook",
+    category: "personal",
     description: "Portafolio en formato de red social retro estilo Facebook 2012, con perfil, proyectos, certificados y habilidades, en español e inglés.",
     period: "2026 (enero)",
     technologies: ["Web", "Portafolio"],
@@ -96,6 +115,7 @@ const es: MoreProject[] = [
   },
   {
     title: "PixelCheck",
+    category: "university",
     description: "Detector de imágenes generadas por IA: subes una imagen y un modelo de Machine Learning determina si fue creada por inteligencia artificial.",
     period: "2025 (noviembre)",
     technologies: ["Machine Learning", "Web"],
@@ -108,6 +128,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Renaceris Web",
+    category: "client",
     description: "Página web para una clínica de estética y salud con 3 sedes en Perú (Lima, Huánuco y Pucallpa). Presenta tratamientos especializados como rinoplastia, lipoescultura y más, con un diseño moderno y elegante.",
     period: "2026 (febrero)",
     technologies: ["React", "TypeScript", "Tailwind"],
@@ -119,6 +140,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Eemerson Sac Web",
+    category: "client",
     description: "Página web corporativa para Eemerson SAC, empresa de transporte especializada en el traslado de todo tipo de contenedores, con más de 15 años de trayectoria en el sector logístico peruano.",
     period: "2025 (octubre)",
     technologies: ["React", "TypeScript", "Tailwind"],
@@ -130,6 +152,7 @@ const es: MoreProject[] = [
   },
   {
     title: "StefWare",
+    category: "personal",
     description: "Directorio para descubrir y compartir sitios, apps y herramientas creadas por jóvenes desarrolladores, con perfiles y comunidad.",
     period: "2025 (agosto)",
     technologies: ["Web", "Comunidad"],
@@ -142,6 +165,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Plataforma Civil",
+    category: "client",
     description: "Sistema integral de gestión de proyectos MEP (mecánicos, eléctricos y sanitarios): control de calidad y colaboración entre equipos y subcontratistas.",
     period: "2025 (junio)",
     technologies: ["Web", "Gestión de proyectos"],
@@ -153,6 +177,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Wko Negocios",
+    category: "test",
     description: "Landing page para WKO Negocios, empresa peruana que conecta a sus clientes con las mejores soluciones de conectividad: planes de internet de alta velocidad y dispositivos móviles de última generación.",
     period: "2026 (marzo)",
     technologies: ["React", "TypeScript", "Tailwind"],
@@ -165,6 +190,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Chat Platform",
+    category: "personal",
     description: "Aplicación web full-stack con sistema completo de mensajería en tiempo real entre usuarios, soportando interfaces intuitivas para la comunicación instantánea y gestión de contactos.",
     period: "2025 (febrero)",
     technologies: ["React", "NestJS", "Supabase", "TypeScript", "WebSockets"],
@@ -178,6 +204,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Simulador de Bonos Financieros",
+    category: "university",
     description: "Plataforma para gestionar bonos corporativos.\n\nAcceso de prueba:\n  · Usuario:  20123456789   ·  Contraseña: demo123\n  · Admin:    20100123456   ·  Contraseña: admin123",
     period: "2025 (marzo)",
     technologies: ["React", "Typescript", "Tailwind"],
@@ -189,6 +216,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Una Distancia Corta",
+    category: "personal",
     description: "Aplicación web para parejas o amigos a distancia que permite compartir imágenes con ubicación y fecha en un mapa global, facilitando la conexión entre personas en diferentes partes del mundo.",
     period: "2025 (enero-febrero)",
     technologies: ["HTML", "CSS", "JavaScript", "Firebase", "Mi novia"],
@@ -202,6 +230,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Sistema de Matrícula UPC",
+    category: "test",
     description: "Una nueva versión que simula la matrícula de la Universidad Peruana de Ciencias Aplicadas, con un diseño moderno y una interfaz intuitiva para facilitar el proceso de inscripción.",
     period: "2024 (agosto-septiembre)",
     technologies: ["React", "Tailwind", "Typescript", "Vite"],
@@ -214,6 +243,7 @@ const es: MoreProject[] = [
   },
   {
     title: "AquaConecta",
+    category: "university",
     description: "Landing page para una empresa de servcios de control de uso del agua. Incluye un diseño atractivo y funcional, optimizado para SEO y con integración de formularios de contacto.",
     period: "2025 (abril)",
     technologies: ["HTML", "CSS", "JS", "Figma"],
@@ -225,6 +255,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Manage Wise",
+    category: "university",
     description: "Plataforma para la gestión y optimización de proyectos de desarrollo de software, con funcionalidades para coordinar equipos, visualizar sprints y monitorear el progreso en tiempo real.",
     period: "2024 (septiembre)",
     technologies: ["HTML", "CSS", "JavaScript", "Figma"],
@@ -237,6 +268,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Listify MP3 Downloader",
+    category: "personal",
     description: "Listify es un programa en Python que te permite descargar las cancioens de quieras de tus playlist de Spotify, incluso todo un album o playlist completa. Solo necesitas el enlace o buscarlo entre las opciones de búsqueda.",
     period: "2024 (febrero)",
     technologies: ["Python", "YouTube API", "FFmpeg", "Requests"],
@@ -247,6 +279,7 @@ const es: MoreProject[] = [
   },
   {
     title: "App Móvil simulador de ID Cards",
+    category: "test",
     description: "Aplicación móvil que simula la generación de ID Cards universitarias para evidenciar vulnerabilidades en sistemas de autenticación. Permite personalizar datos, códigos QR y fotografías para crear credenciales virtuales con fines educativos sobre seguridad.",
     period: "2024 (octubre-noviembre)",
     technologies: ["Android Studio", "Kotlin", "XML", "ZXing"],
@@ -257,6 +290,7 @@ const es: MoreProject[] = [
   },
   {
     title: "Generador de Horarios Falsos",
+    category: "test",
     description: "Herramienta para evidenciar fallos de seguridad en el sistema de acceso universitario. Incluye opciones para configurar cursos, profesores, aulas y horarios, exportando el resultado final en un formato visual idéntico al oficial.",
     period: "2024 (julio)",
     technologies: ["HTML", "CSS", "JavaScript", "Canvas API"],
@@ -270,6 +304,7 @@ const es: MoreProject[] = [
 const en: MoreProject[] = [
   {
     title: "3D Digital Companion",
+    category: "personal",
     description: "Your room, your avatar, your moment. An editable 3D room with a voxel avatar that shows the activity you choose to share (working, reading, gaming, meditating…) plus a link so others can see you.",
     period: "2026 (October)",
     technologies: ["React", "Three.js", "React Three Fiber", "Vite"],
@@ -281,6 +316,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Real Hour",
+    category: "personal",
     description: "A calculator that shows what an hour of your life is really worth: factoring in your salary, work hours, commute and work-related expenses.",
     period: "2026 (October)",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -292,6 +328,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Git Wrapped",
+    category: "personal",
     description: "Your year on GitHub in 5 cards. Enter any username, no sign-up, and discover their dev personality.",
     period: "2026 (October)",
     technologies: ["Next.js", "GitHub"],
@@ -303,6 +340,7 @@ const en: MoreProject[] = [
   },
   {
     title: "HapticLearn",
+    category: "thesis",
     description: "Dashboard for an app that helps visually impaired children trace letters and numbers with their finger, guided by vibration and voice. Built for inclusive schools in Peru and compatible with TalkBack.",
     period: "2026 (September)",
     technologies: ["Vite", "Accesibilidad", "TalkBack"],
@@ -314,6 +352,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Tapy",
+    category: "own",
     description: "NFC/QR platform to get Google reviews instantly. One tap and the customer lands on your page with your socials, catalog and WhatsApp.",
     period: "2026 (July)",
     technologies: ["Next.js", "NFC", "QR"],
@@ -325,6 +364,7 @@ const en: MoreProject[] = [
   },
   {
     title: "AssetFlow Pro",
+    category: "personal",
     description: "Frontend tool that turns SVGs and images (PNG, JPG, WEBP, HEIC, GIF…) into code ready for React, Vue, Angular or Astro, with a dominant-color palette and conversion utilities.",
     period: "2026 (March)",
     technologies: ["Frontend tooling", "SVG", "Imágenes"],
@@ -336,6 +376,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Facebook-style Portfolio",
+    category: "personal",
     description: "Portfolio built as a retro Facebook-2012-style social network, with profile, projects, certificates and skills, in Spanish and English.",
     period: "2026 (January)",
     technologies: ["Web", "Portafolio"],
@@ -347,6 +388,7 @@ const en: MoreProject[] = [
   },
   {
     title: "PixelCheck",
+    category: "university",
     description: "AI-generated image detector: upload an image and a Machine Learning model determines whether it was created by artificial intelligence.",
     period: "2025 (November)",
     technologies: ["Machine Learning", "Web"],
@@ -359,6 +401,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Renaceris Web",
+    category: "client",
     description: "Website for an aesthetic and health clinic with 3 locations across Peru (Lima, Huánuco, and Pucallpa). Showcases specialized treatments such as rhinoplasty, liposculpture, and more, with a modern and elegant design.",
     period: "2026 (February)",
     technologies: ["React", "TypeScript", "Tailwind"],
@@ -370,6 +413,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Eemerson Sac Web",
+    category: "client",
     description: "Corporate website for Eemerson SAC, a transport company specializing in handling all types of containers, with over 15 years of experience in the Peruvian logistics sector.",
     period: "2025 (October)",
     technologies: ["React", "TypeScript", "Tailwind"],
@@ -381,6 +425,7 @@ const en: MoreProject[] = [
   },
   {
     title: "StefWare",
+    category: "personal",
     description: "Directory to discover and share websites, apps and tools created by young developers, with profiles and a community.",
     period: "2025 (August)",
     technologies: ["Web", "Comunidad"],
@@ -393,6 +438,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Plataforma Civil",
+    category: "client",
     description: "Integrated MEP (mechanical, electrical, plumbing) project management system: quality control and collaboration between teams and subcontractors.",
     period: "2025 (June)",
     technologies: ["Web", "Gestión de proyectos"],
@@ -404,6 +450,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Wko Negocios",
+    category: "test",
     description: "Landing page for WKO Negocios, a Peruvian company connecting customers with the best connectivity solutions: high-speed internet plans and the latest mobile devices.",
     period: "2026 (March)",
     technologies: ["React", "TypeScript", "Tailwind"],
@@ -416,6 +463,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Chat Platform",
+    category: "personal",
     description: "Full-stack web application with a complete real-time messaging system between users, supporting intuitive interfaces for instant communication and contact management.",
     period: "2025 (February)",
     technologies: ["React", "NestJS", "Supabase", "TypeScript", "WebSockets"],
@@ -429,6 +477,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Financial Bonds Simulator",
+    category: "university",
     description: "Platform for managing corporate bonds.\n\nTest credentials:\n  · User:   20123456789   ·  Password: demo123\n  · Admin:  20100123456   ·  Password: admin123",
     period: "2025 (March)",
     technologies: ["React", "Typescript", "Tailwind"],
@@ -440,6 +489,7 @@ const en: MoreProject[] = [
   },
   {
     title: "A Short Distance",
+    category: "personal",
     description: "Web application for long-distance couples or friends that allows sharing images with location and date on a global map, facilitating connection between people in different parts of the world.",
     period: "2025 (January-February)",
     technologies: ["HTML", "CSS", "JavaScript", "Firebase", "My girlfriend"],
@@ -453,6 +503,7 @@ const en: MoreProject[] = [
   },
   {
     title: "UPC Enrollment System",
+    category: "test",
     description: "A new version that simulates the enrollment of Universidad Peruana de Ciencias Aplicadas, with a modern design and an intuitive interface to facilitate the registration process.",
     period: "2024 (August-September)",
     technologies: ["React", "Tailwind", "Typescript", "Vite"],
@@ -465,6 +516,7 @@ const en: MoreProject[] = [
   },
   {
     title: "AquaConecta",
+    category: "university",
     description: "Landing page for a water usage control services company. It features an attractive and functional design, optimized for SEO and integrated contact forms.",
     period: "2025 (April)",
     technologies: ["HTML", "CSS", "JS", "Figma"],
@@ -476,6 +528,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Manage Wise",
+    category: "university",
     description: "Platform for managing and optimizing software development projects, with features for team coordination, sprint visualization, and real-time progress monitoring.",
     period: "2024 (September)",
     technologies: ["HTML", "CSS", "JavaScript", "Figma"],
@@ -488,6 +541,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Listify MP3 Downloader",
+    category: "personal",
     description: "Python program that automates the search and download of songs from YouTube based on a list in TXT format. It uses APIs for efficient searching and conversion tools to obtain high-quality MP3 files.",
     period: "2024 (February)",
     technologies: ["Python", "YouTube API", "FFmpeg", "Requests"],
@@ -498,6 +552,7 @@ const en: MoreProject[] = [
   },
   {
     title: "Mobile ID Cards Simulator",
+    category: "test",
     description: "Mobile application that simulates the generation of university ID Cards to demonstrate vulnerabilities in authentication systems. It allows customization of data, QR codes, and photographs to create virtual credentials for educational purposes on security.",
     period: "2024 (October-November)",
     technologies: ["Android Studio", "Kotlin", "XML", "ZXing"],
@@ -508,6 +563,7 @@ const en: MoreProject[] = [
   },
   {
     title: "False Schedule Generator",
+    category: "test",
     description: "Tool to demonstrate security flaws in the university access system. Includes options to configure courses, professors, classrooms, and schedules, exporting the final result in a visual format identical to the official one.",
     period: "2024 (July)",
     technologies: ["HTML", "CSS", "JavaScript", "Canvas API"],

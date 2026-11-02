@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Reveal from './Reveal';
 import { useLanguage } from '../context/LanguageContext';
 import { getMoreProjects } from '../data/moreProjects';
+import { categoryLabel } from '../data/moreProjects';
 import type { MoreProject } from '../data/moreProjects';
 import ProjectModal from './ProjectModal';
 
@@ -48,7 +49,7 @@ const ProjectArchive = () => {
                 {p.title}
               </span>
               <span className="hidden sm:block col-span-4 tag text-paper/50 group-hover:text-ink truncate">
-                {p.technologies.slice(0, 3).join(' / ')}
+                {categoryLabel(p.category, language)} · {p.technologies.slice(0, 2).join(' / ')}
               </span>
               <span className="col-span-10 col-start-3 sm:col-start-auto sm:col-span-2 flex items-center justify-between sm:justify-end gap-3 tag text-paper/60 group-hover:text-ink">
                 {p.period.replace(/\s*\(.*\)/, '')}

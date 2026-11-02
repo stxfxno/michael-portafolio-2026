@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { ArrowUpRight, X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { categoryLabel } from '../data/moreProjects';
 import type { MoreProject } from '../data/moreProjects';
 
 interface ProjectModalProps {
@@ -64,6 +65,7 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         <div className="p-6 sm:p-8">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag bg-paper text-ink px-2 py-1">{project.period}</span>
+            <span className="tag bg-violet text-ink px-2 py-1">{categoryLabel(project.category, es ? 'es' : 'en')}</span>
             <span className={`tag border px-2 py-1 ${project.inactive ? 'border-paper/40' : 'border-violet text-violet'}`}>
               {status}
             </span>
