@@ -83,17 +83,6 @@ const es: MoreProject[] = [
     }
   },
   {
-    title: "PayBox",
-    description: "Sistema integral de gestión de gastos con categorías dinámicas y matriz de imputación.",
-    period: "2026 (enero)",
-    technologies: ["Web", "Gestión de gastos"],
-    image: "/images/paybox.webp",
-    viewnow: true,
-    links: {
-      live: "http://paybox-2026.netlify.app/"
-    }
-  },
-  {
     title: "Portafolio estilo Facebook",
     description: "Portafolio en formato de red social retro estilo Facebook 2012, con perfil, proyectos, certificados y habilidades, en español e inglés.",
     period: "2026 (enero)",
@@ -315,17 +304,6 @@ const en: MoreProject[] = [
     viewnow: true,
     links: {
       live: "https://assetflow.michaelcarmelino.com/"
-    }
-  },
-  {
-    title: "PayBox",
-    description: "Comprehensive expense management system with dynamic categories and an allocation matrix.",
-    period: "2026 (January)",
-    technologies: ["Web", "Gestión de gastos"],
-    image: "/images/paybox.webp",
-    viewnow: true,
-    links: {
-      live: "http://paybox-2026.netlify.app/"
     }
   },
   {
