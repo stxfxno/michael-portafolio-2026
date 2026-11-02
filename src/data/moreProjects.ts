@@ -17,6 +17,127 @@ export interface MoreProject {
 
 const es: MoreProject[] = [
   {
+    title: "Compañero Digital 3D",
+    description: "Tu cuarto, tu avatar, tu momento. Una habitación 3D editable con un avatar de vóxeles que muestra la actividad que eliges compartir (trabajando, leyendo, jugando, meditando…) y un enlace para que otros te vean.",
+    period: "2026 (octubre)",
+    technologies: ["React", "Three.js", "React Three Fiber", "Vite"],
+    image: "/images/companero_digital_3d.webp",
+    viewnow: true,
+    links: {
+      live: "https://companero-digital-3d.vercel.app/"
+    }
+  },
+  {
+    title: "Hora Real",
+    description: "Calculadora que muestra cuánto vale realmente una hora de tu vida: con tu sueldo, tus horas de trabajo, los traslados y los gastos laborales incluidos.",
+    period: "2026 (octubre)",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "/images/hora_real.webp",
+    viewnow: true,
+    links: {
+      live: "https://hora-real-xi.vercel.app/"
+    }
+  },
+  {
+    title: "Git Wrapped",
+    description: "Tu año en GitHub en 5 tarjetas. Escribes cualquier usuario, sin registro, y descubres su personalidad dev.",
+    period: "2026 (octubre)",
+    technologies: ["Next.js", "GitHub"],
+    image: "/images/git_wrapped.webp",
+    viewnow: true,
+    links: {
+      live: "https://github.michaelcarmelino.com/"
+    }
+  },
+  {
+    title: "HapticLearn",
+    description: "Panel de una app que ayuda a niñas y niños con discapacidad visual a trazar letras y números con el dedo, guiados por vibraciones y voz. Pensada para colegios inclusivos del Perú y compatible con TalkBack.",
+    period: "2026 (septiembre)",
+    technologies: ["Vite", "Accesibilidad", "TalkBack"],
+    image: "/images/haptic_learn.webp",
+    viewnow: true,
+    links: {
+      live: "https://haptic-learn-panel-main.vercel.app/"
+    }
+  },
+  {
+    title: "Tapy",
+    description: "Plataforma NFC/QR para conseguir reseñas de Google al instante. Un toque y el cliente llega a tu página con tus redes, catálogo y WhatsApp.",
+    period: "2026 (julio)",
+    technologies: ["Next.js", "NFC", "QR"],
+    image: "/images/tapy.webp",
+    viewnow: true,
+    links: {
+      live: "https://tapy.click/"
+    }
+  },
+  {
+    title: "AssetFlow Pro",
+    description: "Herramienta frontend que convierte SVG e imágenes (PNG, JPG, WEBP, HEIC, GIF…) en código listo para React, Vue, Angular o Astro, con paleta de colores dominantes y utilidades de conversión.",
+    period: "2026 (marzo)",
+    technologies: ["Frontend tooling", "SVG", "Imágenes"],
+    image: "/images/assetflow.webp",
+    viewnow: true,
+    links: {
+      live: "https://assetflow.michaelcarmelino.com/"
+    }
+  },
+  {
+    title: "PayBox",
+    description: "Sistema integral de gestión de gastos con categorías dinámicas y matriz de imputación.",
+    period: "2026 (enero)",
+    technologies: ["Web", "Gestión de gastos"],
+    image: "/images/paybox.webp",
+    viewnow: true,
+    links: {
+      live: "http://paybox-2026.netlify.app/"
+    }
+  },
+  {
+    title: "Portafolio estilo Facebook",
+    description: "Portafolio en formato de red social retro estilo Facebook 2012, con perfil, proyectos, certificados y habilidades, en español e inglés.",
+    period: "2026 (enero)",
+    technologies: ["Web", "Portafolio"],
+    image: "/images/facebook_portfolio.webp",
+    viewnow: true,
+    links: {
+      live: "http://feisbook-stxfxno.netlify.app/"
+    }
+  },
+  {
+    title: "PixelCheck",
+    description: "Detector de imágenes generadas por IA: subes una imagen y un modelo de Machine Learning determina si fue creada por inteligencia artificial.",
+    period: "2025 (noviembre)",
+    technologies: ["Machine Learning", "Web"],
+    image: "/images/pixelcheck.webp",
+    viewnow: true,
+    links: {
+      live: "http://pixel-check-app.netlify.app/"
+    }
+  },
+  {
+    title: "StefWare",
+    description: "Directorio para descubrir y compartir sitios, apps y herramientas creadas por jóvenes desarrolladores, con perfiles y comunidad.",
+    period: "2025 (agosto)",
+    technologies: ["Web", "Comunidad"],
+    image: "/images/stefware.webp",
+    viewnow: true,
+    links: {
+      live: "http://stefware.netlify.app/"
+    }
+  },
+  {
+    title: "Plataforma Civil",
+    description: "Sistema integral de gestión de proyectos MEP (mecánicos, eléctricos y sanitarios): control de calidad y colaboración entre equipos y subcontratistas.",
+    period: "2025 (junio)",
+    technologies: ["Web", "Gestión de proyectos"],
+    image: "/images/plataforma_civil.webp",
+    viewnow: true,
+    links: {
+      live: "http://plataforma-ing-civil.netlify.app/"
+    }
+  },
+  {
     title: "Wko Negocios",
     description: "Landing page para WKO Negocios, empresa peruana que conecta a sus clientes con las mejores soluciones de conectividad: planes de internet de alta velocidad y dispositivos móviles de última generación.",
     period: "2026 (marzo)",
@@ -130,6 +251,127 @@ const es: MoreProject[] = [
   }];
 
 const en: MoreProject[] = [
+  {
+    title: "3D Digital Companion",
+    description: "Your room, your avatar, your moment. An editable 3D room with a voxel avatar that shows the activity you choose to share (working, reading, gaming, meditating…) plus a link so others can see you.",
+    period: "2026 (October)",
+    technologies: ["React", "Three.js", "React Three Fiber", "Vite"],
+    image: "/images/companero_digital_3d.webp",
+    viewnow: true,
+    links: {
+      live: "https://companero-digital-3d.vercel.app/"
+    }
+  },
+  {
+    title: "Real Hour",
+    description: "A calculator that shows what an hour of your life is really worth: factoring in your salary, work hours, commute and work-related expenses.",
+    period: "2026 (October)",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "/images/hora_real.webp",
+    viewnow: true,
+    links: {
+      live: "https://hora-real-xi.vercel.app/"
+    }
+  },
+  {
+    title: "Git Wrapped",
+    description: "Your year on GitHub in 5 cards. Enter any username, no sign-up, and discover their dev personality.",
+    period: "2026 (October)",
+    technologies: ["Next.js", "GitHub"],
+    image: "/images/git_wrapped.webp",
+    viewnow: true,
+    links: {
+      live: "https://github.michaelcarmelino.com/"
+    }
+  },
+  {
+    title: "HapticLearn",
+    description: "Dashboard for an app that helps visually impaired children trace letters and numbers with their finger, guided by vibration and voice. Built for inclusive schools in Peru and compatible with TalkBack.",
+    period: "2026 (September)",
+    technologies: ["Vite", "Accesibilidad", "TalkBack"],
+    image: "/images/haptic_learn.webp",
+    viewnow: true,
+    links: {
+      live: "https://haptic-learn-panel-main.vercel.app/"
+    }
+  },
+  {
+    title: "Tapy",
+    description: "NFC/QR platform to get Google reviews instantly. One tap and the customer lands on your page with your socials, catalog and WhatsApp.",
+    period: "2026 (July)",
+    technologies: ["Next.js", "NFC", "QR"],
+    image: "/images/tapy.webp",
+    viewnow: true,
+    links: {
+      live: "https://tapy.click/"
+    }
+  },
+  {
+    title: "AssetFlow Pro",
+    description: "Frontend tool that turns SVGs and images (PNG, JPG, WEBP, HEIC, GIF…) into code ready for React, Vue, Angular or Astro, with a dominant-color palette and conversion utilities.",
+    period: "2026 (March)",
+    technologies: ["Frontend tooling", "SVG", "Imágenes"],
+    image: "/images/assetflow.webp",
+    viewnow: true,
+    links: {
+      live: "https://assetflow.michaelcarmelino.com/"
+    }
+  },
+  {
+    title: "PayBox",
+    description: "Comprehensive expense management system with dynamic categories and an allocation matrix.",
+    period: "2026 (January)",
+    technologies: ["Web", "Gestión de gastos"],
+    image: "/images/paybox.webp",
+    viewnow: true,
+    links: {
+      live: "http://paybox-2026.netlify.app/"
+    }
+  },
+  {
+    title: "Facebook-style Portfolio",
+    description: "Portfolio built as a retro Facebook-2012-style social network, with profile, projects, certificates and skills, in Spanish and English.",
+    period: "2026 (January)",
+    technologies: ["Web", "Portafolio"],
+    image: "/images/facebook_portfolio.webp",
+    viewnow: true,
+    links: {
+      live: "http://feisbook-stxfxno.netlify.app/"
+    }
+  },
+  {
+    title: "PixelCheck",
+    description: "AI-generated image detector: upload an image and a Machine Learning model determines whether it was created by artificial intelligence.",
+    period: "2025 (November)",
+    technologies: ["Machine Learning", "Web"],
+    image: "/images/pixelcheck.webp",
+    viewnow: true,
+    links: {
+      live: "http://pixel-check-app.netlify.app/"
+    }
+  },
+  {
+    title: "StefWare",
+    description: "Directory to discover and share websites, apps and tools created by young developers, with profiles and a community.",
+    period: "2025 (August)",
+    technologies: ["Web", "Comunidad"],
+    image: "/images/stefware.webp",
+    viewnow: true,
+    links: {
+      live: "http://stefware.netlify.app/"
+    }
+  },
+  {
+    title: "Plataforma Civil",
+    description: "Integrated MEP (mechanical, electrical, plumbing) project management system: quality control and collaboration between teams and subcontractors.",
+    period: "2025 (June)",
+    technologies: ["Web", "Gestión de proyectos"],
+    image: "/images/plataforma_civil.webp",
+    viewnow: true,
+    links: {
+      live: "http://plataforma-ing-civil.netlify.app/"
+    }
+  },
   {
     title: "Wko Negocios",
     description: "Landing page for WKO Negocios, a Peruvian company connecting customers with the best connectivity solutions: high-speed internet plans and the latest mobile devices.",
