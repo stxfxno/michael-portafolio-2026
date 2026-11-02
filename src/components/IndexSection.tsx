@@ -1,5 +1,4 @@
 import Reveal from './Reveal';
-import Scribble from './Scribble';
 import { useLanguage } from '../context/LanguageContext';
 
 // Índice de contenidos inspirado en la diapositiva "INDEX"
@@ -34,7 +33,7 @@ const IndexSection = () => {
     <section className="relative py-10">
       {/* Cintas cruzadas con el manifiesto */}
       <div className="relative h-52 sm:h-64 overflow-hidden">
-        <div className="absolute inset-x-[-5%] top-[22%] bg-paper text-ink py-3 rotate-[-4deg] z-10">
+        <div className="absolute inset-x-[-5%] top-[22%] bg-paper text-ink py-3  z-10">
           <div className="flex w-max animate-marquee">
             {[...manifesto, ...manifesto].map((m, i) => (
               <span key={i} className={`px-6 whitespace-nowrap text-4xl sm:text-5xl ${i % 2 ? 'font-serif italic' : 'font-display uppercase'}`}>
@@ -43,7 +42,7 @@ const IndexSection = () => {
             ))}
           </div>
         </div>
-        <div className="absolute inset-x-[-5%] top-[48%] bg-violet text-ink py-2 rotate-[3deg]">
+        <div className="absolute inset-x-[-5%] top-[48%] bg-violet text-ink py-2 ">
           <div className="flex w-max animate-marquee-reverse">
             {[...tags, ...tags, ...tags, ...tags].map((m, i) => (
               <span key={i} className="px-5 whitespace-nowrap tag text-sm">
@@ -52,14 +51,12 @@ const IndexSection = () => {
             ))}
           </div>
         </div>
-        <Scribble shape="squiggle" className="absolute right-[10%] bottom-2 w-40 h-16 z-20" strokeWidth={4} color="#3d5afe" />
       </div>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-12">
         <Reveal>
           <div className="relative inline-block mb-12 px-4">
             <h2 className="font-display uppercase text-6xl sm:text-7xl">{es ? 'Índice' : 'Index'}</h2>
-            <Scribble shape="circle" className="absolute -inset-x-6 -inset-y-4 w-[calc(100%+3rem)] h-[calc(100%+2rem)]" strokeWidth={3} />
           </div>
         </Reveal>
 

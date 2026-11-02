@@ -41,11 +41,11 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-24 scroll-mt-10">
-      <SectionTitle number="03." title={t('skills.bigtitle')} subtitle={t('skills.subtitle')} note={t('skills.note')} />
+      <SectionTitle number="03." title={t('skills.bigtitle')} subtitle={t('skills.subtitle')} />
 
       {/* Cintas gigantes en movimiento */}
       <div className="relative w-screen left-1/2 -translate-x-1/2 mb-16 overflow-hidden py-4">
-        <div className="bg-violet text-ink py-3 -rotate-2 scale-105">
+        <div className="bg-violet text-ink py-3">
           <div className="flex w-max animate-marquee">
             {[...all, ...all].map((s, i) => (
               <span key={i} className="font-display uppercase text-4xl sm:text-5xl px-6 whitespace-nowrap">
@@ -54,7 +54,7 @@ const Skills = () => {
             ))}
           </div>
         </div>
-        <div className="py-3 rotate-1 border-y border-paper/20">
+        <div className="py-3 border-y border-paper/20">
           <div className="flex w-max animate-marquee-reverse">
             {[...all].reverse().concat([...all].reverse()).map((s, i) => (
               <span key={i} className="font-display uppercase text-4xl sm:text-5xl px-6 whitespace-nowrap outline-text">

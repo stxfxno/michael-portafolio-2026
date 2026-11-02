@@ -15,7 +15,6 @@ const Footer = () => {
 
   return (
     <footer className="relative mt-10 bg-paper text-ink overflow-hidden">
-      <div className="stripes h-4 w-full opacity-90" />
       <div className="max-w-7xl mx-auto px-5 sm:px-8 pt-14 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-10">
           <p className="md:col-span-5 font-serif italic text-3xl leading-snug">

@@ -215,7 +215,6 @@ const Projects = () => {
         number="02."
         title={t('projects.bigtitle')}
         subtitle={t('projects.description')}
-        note={t('projects.note')}
       />
 
       <div>

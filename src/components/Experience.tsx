@@ -99,7 +99,7 @@ const Experience = () => {
 
   return (
     <section id="experience" className="py-24 scroll-mt-10">
-      <SectionTitle number="04." title={t('experience.bigtitle')} subtitle={t('experience.subtitle')} note={t('experience.note')} />
+      <SectionTitle number="04." title={t('experience.bigtitle')} subtitle={t('experience.subtitle')} />
       <div className="border-b border-paper/20">
         {experiences.map((exp, index) => (
           <Reveal key={index}>

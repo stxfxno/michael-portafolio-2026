@@ -1225,7 +1225,7 @@ const GalagaGame = () => {
 
   return (
     <section id="arcade" className="py-24 scroll-mt-10">
-      <SectionTitle number="06." title={t('arcade.bigtitle')} subtitle={t('arcade.subtitle')} note={t('arcade.note')} />
+      <SectionTitle number="06." title={t('arcade.bigtitle')} subtitle={t('arcade.subtitle')} />
 
       <Reveal>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -1276,13 +1276,12 @@ const GalagaGame = () => {
                 </div>
               ))}
             </div>
-            <p className="font-hand text-lg text-cobalt mt-6 -rotate-2">
+            <p className="font-hand text-lg text-cobalt mt-6">
               {es ? 'caen muy de vez en cuando · mini jefe cada 5 niveles' : 'they drop very rarely · mini boss every 5 levels'}
             </p>
           </div>
 
           <div className="lg:col-span-8 order-1 lg:order-2 relative">
-            <div className="absolute -top-4 right-6 w-32 h-5 stripes z-10" />
             <div
               ref={wrapperRef}
               tabIndex={0}

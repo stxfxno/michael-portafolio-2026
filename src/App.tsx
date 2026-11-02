@@ -16,7 +16,6 @@ import { LanguageProvider } from './context/LanguageContext';
 const HomePage = () => {
   return (
     <div className="relative bg-ink text-paper min-h-screen overflow-x-clip">
-      <div className="grain" aria-hidden="true" />
       <Navbar />
       <Hero />
       <IndexSection />

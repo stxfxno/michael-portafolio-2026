@@ -3,7 +3,6 @@ import { ArrowUpRight, Github, Linkedin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import SectionTitle from './SectionTitle';
 import Reveal from './Reveal';
-import Scribble from './Scribble';
 import { useLanguage } from '../context/LanguageContext';
 
 const Contact = () => {
@@ -82,7 +81,6 @@ const Contact = () => {
           <a href="mailto:carmelino0213@gmail.com" className="relative inline-block font-display text-[8.5vw] sm:text-5xl lg:text-[2.6rem] xl:text-5xl leading-none hover:text-violet transition-colors break-all">
             carmelino0213<br />@gmail.com
           </a>
-          <Scribble shape="underline" className="w-full max-w-sm h-5 mt-3" strokeWidth={3} />
 
           <div className="mt-12 space-y-4">
             <a href="https://www.linkedin.com/in/michael-carmelino-due%C3%B1as-a5117a264/" target="_blank" rel="noopener noreferrer" className="group flex items-center justify-between border-b border-paper/20 pb-4 hover:text-violet transition-colors">
@@ -124,7 +122,7 @@ const Contact = () => {
               <button type="submit" disabled={isSubmitting} className="btn-ink disabled:opacity-50 disabled:cursor-not-allowed">
                 {isSubmitting ? t('contact.sending') : t('contact.send')} <ArrowUpRight size={14} />
               </button>
-              <span className="font-hand text-xl text-cobalt -rotate-3">{t('contact.note')}</span>
+              <span className="font-hand text-xl text-cobalt">{t('contact.note')}</span>
             </div>
           </form>
         </Reveal>

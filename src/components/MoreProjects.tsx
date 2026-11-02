@@ -14,7 +14,6 @@ const MoreProjects = () => {
 
   return (
     <div className="relative bg-ink text-paper min-h-screen overflow-x-clip">
-      <div className="grain" aria-hidden="true" />
       <Navbar />
       <section className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-5 sm:px-8">
