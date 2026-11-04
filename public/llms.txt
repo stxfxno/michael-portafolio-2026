@@ -1,14 +1,62 @@
 # Michael Carmelino Dueñas
 
-> Full Stack Developer en Lima, Perú. Construye plataformas web, apps móviles, integraciones (SUNAT API, Odoo ERP) y automatizaciones con React, Next.js, TypeScript, NestJS y Supabase. Estudiante de Ingeniería de Software en la UPC.
+> Full Stack Developer en Lima, Perú. Construye plataformas web, apps móviles, integraciones (SUNAT API, Odoo ERP) y automatizaciones con React, Next.js, TypeScript, NestJS y Supabase. Estudiante de noveno ciclo de Ingeniería de Software en la UPC (2022 - presente). Español nativo; inglés.
+
+Contacto: carmelino0213@gmail.com · GitHub: https://github.com/stxfxno · LinkedIn: https://www.linkedin.com/in/michael-carmelino-due%C3%B1as-a5117a264/ · Portafolio: https://michaelcarmelino.com (ES/EN)
 
 ## Experiencia
-- Software Engineer, Eemerson SAC (Oct 2025 - Oct 2026): plataforma Next.js 14 + Supabase, gestión de pagos a conductores, flota GPS, OCR, integración SUNAT (OAuth) y Odoo ERP, cron jobs.
-- Software Engineer / Full Stack Developer, Sprinta AI (Feb 2025 - Jun 2026): plataforma web con React, TypeScript y Supabase; agente de ventas por WhatsApp y CRM.
-- Web Developer, Freelance (Oct 2024 - presente): sitios, landing pages y plataformas a medida.
+- **Software Engineer — Eemerson SAC** (Oct 2025 - Oct 2026): plataforma de gestión operativa para una empresa de transporte de carga (Next.js 14, TypeScript, Supabase, Tailwind, shadcn/ui): pagos a conductores con exportación a Excel, flota GPS vía Navitel, portal móvil-first para conductores con OCR y registro de gastos. Integró la API de SUNAT (OAuth) para GRE y guías de remisión electrónicas y la API de Odoo ERP para sincronizar alertas de vencimientos documentarios. Administró directamente el Odoo ERP del cliente y programó cron jobs de automatización y sincronización.
+- **Software Engineer — Sprinta AI** (Ene 2026 - Jun 2026): continuó el desarrollo de la plataforma web (React, TypeScript, Supabase).
+- **Full Stack Developer — Sprinta AI** (Feb 2025 - Oct 2025): plataforma web con agente de IA para ventas por WhatsApp; nuevas funcionalidades del agente, optimización del CRM integrado y mejoras de rendimiento.
+- **Web Developer — Freelance** (Oct 2024 - presente): sitios web, landing pages y plataformas a medida para clientes de distintos rubros.
+- **Instructor de Programación — Educación Online** (May - Nov 2023): clases de lógica y programación en Java a estudiantes de España; asesorías y revisión de tareas.
 
-## Enlaces
-- [Portafolio](https://michaelcarmelino.com)
-- [GitHub](https://github.com/stxfxno)
-- [LinkedIn](https://www.linkedin.com/in/michael-carmelino-due%C3%B1as-a5117a264/)
-- Email: carmelino0213@gmail.com
+## Educación
+- Ingeniería de Software, UPC (2022 - presente): noveno ciclo; desarrollo web, aplicaciones móviles y seguridad informática.
+- Inglés, Británico (Oct 2021).
+
+## Certificaciones
+- Google IT Support (Google / Coursera, Abr 2026)
+- Excel Skills for Business (Macquarie University / Coursera, Dic 2025)
+- Fundamentos Profesionales de Análisis de Datos (Microsoft, 2023)
+- Estructura de Datos en Python (University of Michigan / Coursera, 2023)
+- Fundamentos de Scrum (Coursera, 2023)
+- Base de Datos con MongoDB (MongoDB, 2023)
+
+## Skills
+- Lenguajes: Python, Java, JavaScript, TypeScript, HTML/CSS
+- Frameworks: React, Next.js, NestJS, React Native, Tailwind CSS
+- Bases de datos: MySQL, SQL Server, MongoDB, Firebase, Supabase
+- Herramientas: Git, Android Studio, Postman, Swagger, Linear, Odoo ERP
+- Diseño: Figma, Illustrator
+- Otros: SUNAT API, Vercel, Render, Railway
+
+## Proyectos destacados
+- **Gestión Documental BIM** (Abr 2026): flujo de aprobación de planos/modelos para equipos de construcción, ciclo de 5 etapas con roles (Coordinador BIM, Aprobador, Residente de obra), offline-first con IndexedDB. React, TypeScript, Tailwind, Supabase.
+- **Sprinta AI** (Mar 2026): agente de IA para ventas por WhatsApp con CRM integrado. React, TypeScript, Tailwind, Supabase. https://sprinta.ai/landing
+- **Plataforma Eemerson SAC** (Nov 2025 - Feb 2026): ver Experiencia. Next.js 14, TypeScript, Supabase.
+- **Renaceris Plataforma** (Ene - Abr 2026): gestión de citas médicas con roles de recepcionista y médico en 3 sedes. React, NestJS, TypeScript, Supabase.
+
+## Otros proyectos
+- [Compañero Digital 3D](https://companero-digital-3d.vercel.app/) — Personal, 2026 (octubre). React, Three.js, React Three Fiber, Vite.
+- [Hora Real](https://hora-real-xi.vercel.app/) — Personal, 2026 (octubre). HTML, CSS, JavaScript.
+- [Git Wrapped](https://github.michaelcarmelino.com/) — Personal, 2026 (octubre). Next.js, GitHub.
+- [HapticLearn](https://haptic-learn-panel-main.vercel.app/) — Tesis universitaria, 2026 (septiembre). Vite, Accesibilidad, TalkBack.
+- [Tapy](https://tapy.click/) — Negocio propio, 2026 (julio). Next.js, NFC, QR.
+- [AssetFlow Pro](https://assetflow.michaelcarmelino.com/) — Personal, 2026 (marzo). Frontend tooling, SVG, Imágenes.
+- [Portafolio estilo Facebook](http://feisbook-stxfxno.netlify.app/) — Personal, 2026 (enero). Web, Portafolio.
+- [PixelCheck](http://pixel-check-app.netlify.app/) — Universitario, 2025 (noviembre). Machine Learning, Web.
+- [Renaceris Web](https://www.renaceris.com/) — Cliente, 2026 (febrero). React, TypeScript, Tailwind.
+- [Eemerson Sac Web](https://eemersonsac.com/) — Cliente, 2025 (octubre). React, TypeScript, Tailwind.
+- [StefWare](http://stefware.netlify.app/) — Personal, 2025 (agosto). Web, Comunidad.
+- [Plataforma Civil](http://plataforma-ing-civil.netlify.app/) — Cliente, 2025 (junio). Web, Gestión de proyectos.
+- [Wko Negocios](https://wko-negocios-landing.vercel.app/) — Cliente, 2026 (marzo). React, TypeScript, Tailwind.
+- [Chat Platform](https://chat-platform-stefdev.netlify.app/login) — Personal, 2025 (febrero). React, NestJS, Supabase, TypeScript, WebSockets.
+- [Simulador de Bonos Financieros](https://metodo-frances-grupo6.netlify.app/login) — Universitario, 2025 (marzo). React, Typescript, Tailwind.
+- [Una Distancia Corta](https://unadistanciacorta.netlify.app/) — Personal, 2025 (enero-febrero). HTML, CSS, JavaScript, Firebase, Mi novia.
+- [Sistema de Matrícula UPC](https://matricula-upc-stefdev.netlify.app/) — Prueba/validación, 2024 (agosto-septiembre). React, Tailwind, Typescript, Vite.
+- [AquaConecta](https://aquaconecta.netlify.app/) — Universitario, 2025 (abril). HTML, CSS, JS, Figma.
+- [Manage Wise](https://manage-wise.netlify.app/) — Universitario, 2024 (septiembre). HTML, CSS, JavaScript, Figma.
+- [Listify MP3 Downloader](https://github.com/stxfxno/Listify) — Personal, 2024 (febrero). Python, YouTube API, FFmpeg, Requests.
+- App Móvil simulador de ID Cards — Prueba/validación, 2024 (octubre-noviembre). Android Studio, Kotlin, XML, ZXing.
+- [Generador de Horarios Falsos](https://stefware-upc-horarios.netlify.app/) — Prueba/validación, 2024 (julio). HTML, CSS, JavaScript, Canvas API.

@@ -1,0 +1,62 @@
+# Michael Carmelino Dueñas
+
+> Full Stack Developer en Lima, Perú. Construye plataformas web, apps móviles, integraciones (SUNAT API, Odoo ERP) y automatizaciones con React, Next.js, TypeScript, NestJS y Supabase. Estudiante de noveno ciclo de Ingeniería de Software en la UPC (2022 - presente). Español nativo; inglés.
+
+Contacto: carmelino0213@gmail.com · GitHub: https://github.com/stxfxno · LinkedIn: https://www.linkedin.com/in/michael-carmelino-due%C3%B1as-a5117a264/ · Portafolio: https://michaelcarmelino.com (ES/EN)
+
+## Experiencia
+- **Software Engineer — Eemerson SAC** (Oct 2025 - Oct 2026): plataforma de gestión operativa para una empresa de transporte de carga (Next.js 14, TypeScript, Supabase, Tailwind, shadcn/ui): pagos a conductores con exportación a Excel, flota GPS vía Navitel, portal móvil-first para conductores con OCR y registro de gastos. Integró la API de SUNAT (OAuth) para GRE y guías de remisión electrónicas y la API de Odoo ERP para sincronizar alertas de vencimientos documentarios. Administró directamente el Odoo ERP del cliente y programó cron jobs de automatización y sincronización.
+- **Software Engineer — Sprinta AI** (Ene 2026 - Jun 2026): continuó el desarrollo de la plataforma web (React, TypeScript, Supabase).
+- **Full Stack Developer — Sprinta AI** (Feb 2025 - Oct 2025): plataforma web con agente de IA para ventas por WhatsApp; nuevas funcionalidades del agente, optimización del CRM integrado y mejoras de rendimiento.
+- **Web Developer — Freelance** (Oct 2024 - presente): sitios web, landing pages y plataformas a medida para clientes de distintos rubros.
+- **Instructor de Programación — Educación Online** (May - Nov 2023): clases de lógica y programación en Java a estudiantes de España; asesorías y revisión de tareas.
+
+## Educación
+- Ingeniería de Software, UPC (2022 - presente): noveno ciclo; desarrollo web, aplicaciones móviles y seguridad informática.
+- Inglés, Británico (Oct 2021).
+
+## Certificaciones
+- Google IT Support (Google / Coursera, Abr 2026)
+- Excel Skills for Business (Macquarie University / Coursera, Dic 2025)
+- Fundamentos Profesionales de Análisis de Datos (Microsoft, 2023)
+- Estructura de Datos en Python (University of Michigan / Coursera, 2023)
+- Fundamentos de Scrum (Coursera, 2023)
+- Base de Datos con MongoDB (MongoDB, 2023)
+
+## Skills
+- Lenguajes: Python, Java, JavaScript, TypeScript, HTML/CSS
+- Frameworks: React, Next.js, NestJS, React Native, Tailwind CSS
+- Bases de datos: MySQL, SQL Server, MongoDB, Firebase, Supabase
+- Herramientas: Git, Android Studio, Postman, Swagger, Linear, Odoo ERP
+- Diseño: Figma, Illustrator
+- Otros: SUNAT API, Vercel, Render, Railway
+
+## Proyectos destacados
+- **Gestión Documental BIM** (Abr 2026): flujo de aprobación de planos/modelos para equipos de construcción, ciclo de 5 etapas con roles (Coordinador BIM, Aprobador, Residente de obra), offline-first con IndexedDB. React, TypeScript, Tailwind, Supabase.
+- **Sprinta AI** (Mar 2026): agente de IA para ventas por WhatsApp con CRM integrado. React, TypeScript, Tailwind, Supabase. https://sprinta.ai/landing
+- **Plataforma Eemerson SAC** (Nov 2025 - Feb 2026): ver Experiencia. Next.js 14, TypeScript, Supabase.
+- **Renaceris Plataforma** (Ene - Abr 2026): gestión de citas médicas con roles de recepcionista y médico en 3 sedes. React, NestJS, TypeScript, Supabase.
+
+## Otros proyectos
+- **Compañero Digital 3D** [Personal, 2026 (octubre)] — Tu cuarto, tu avatar, tu momento. Una habitación 3D editable con un avatar de vóxeles que muestra la actividad que eliges compartir (trabajando, leyendo, jugando, meditando…) y un enlace para que otros te vean. Tecnologías: React, Three.js, React Three Fiber, Vite. https://companero-digital-3d.vercel.app/
+- **Hora Real** [Personal, 2026 (octubre)] — Calculadora que muestra cuánto vale realmente una hora de tu vida: con tu sueldo, tus horas de trabajo, los traslados y los gastos laborales incluidos. Tecnologías: HTML, CSS, JavaScript. https://hora-real-xi.vercel.app/
+- **Git Wrapped** [Personal, 2026 (octubre)] — Tu año en GitHub en 5 tarjetas. Escribes cualquier usuario, sin registro, y descubres su personalidad dev. Tecnologías: Next.js, GitHub. https://github.michaelcarmelino.com/
+- **HapticLearn** [Tesis universitaria, 2026 (septiembre)] — Panel de una app que ayuda a niñas y niños con discapacidad visual a trazar letras y números con el dedo, guiados por vibraciones y voz. Pensada para colegios inclusivos del Perú y compatible con TalkBack. Tecnologías: Vite, Accesibilidad, TalkBack. https://haptic-learn-panel-main.vercel.app/
+- **Tapy** [Negocio propio, 2026 (julio)] — Plataforma NFC/QR para conseguir reseñas de Google al instante. Un toque y el cliente llega a tu página con tus redes, catálogo y WhatsApp. Tecnologías: Next.js, NFC, QR. https://tapy.click/
+- **AssetFlow Pro** [Personal, 2026 (marzo)] — Herramienta frontend que convierte SVG e imágenes (PNG, JPG, WEBP, HEIC, GIF…) en código listo para React, Vue, Angular o Astro, con paleta de colores dominantes y utilidades de conversión. Tecnologías: Frontend tooling, SVG, Imágenes. https://assetflow.michaelcarmelino.com/
+- **Portafolio estilo Facebook** [Personal, 2026 (enero)] — Portafolio en formato de red social retro estilo Facebook 2012, con perfil, proyectos, certificados y habilidades, en español e inglés. Tecnologías: Web, Portafolio. http://feisbook-stxfxno.netlify.app/
+- **PixelCheck** [Universitario, 2025 (noviembre)] — Detector de imágenes generadas por IA: subes una imagen y un modelo de Machine Learning determina si fue creada por inteligencia artificial. Tecnologías: Machine Learning, Web. http://pixel-check-app.netlify.app/
+- **Renaceris Web** [Cliente, 2026 (febrero)] — Página web para una clínica de estética y salud con 3 sedes en Perú (Lima, Huánuco y Pucallpa). Presenta tratamientos especializados como rinoplastia, lipoescultura y más, con un diseño moderno y elegante. Tecnologías: React, TypeScript, Tailwind. https://www.renaceris.com/
+- **Eemerson Sac Web** [Cliente, 2025 (octubre)] — Página web corporativa para Eemerson SAC, empresa de transporte especializada en el traslado de todo tipo de contenedores, con más de 15 años de trayectoria en el sector logístico peruano. Tecnologías: React, TypeScript, Tailwind. https://eemersonsac.com/
+- **StefWare** [Personal, 2025 (agosto)] — Directorio para descubrir y compartir sitios, apps y herramientas creadas por jóvenes desarrolladores, con perfiles y comunidad. Tecnologías: Web, Comunidad. http://stefware.netlify.app/
+- **Plataforma Civil** [Cliente, 2025 (junio)] — Sistema integral de gestión de proyectos MEP (mecánicos, eléctricos y sanitarios): control de calidad y colaboración entre equipos y subcontratistas. Tecnologías: Web, Gestión de proyectos. http://plataforma-ing-civil.netlify.app/
+- **Wko Negocios** [Cliente, 2026 (marzo)] — Landing page para WKO Negocios, empresa peruana que conecta a sus clientes con las mejores soluciones de conectividad: planes de internet de alta velocidad y dispositivos móviles de última generación. Tecnologías: React, TypeScript, Tailwind. https://wko-negocios-landing.vercel.app/
+- **Chat Platform** [Personal, 2025 (febrero)] — Aplicación web full-stack con sistema completo de mensajería en tiempo real entre usuarios, soportando interfaces intuitivas para la comunicación instantánea y gestión de contactos. Tecnologías: React, NestJS, Supabase, TypeScript, WebSockets. https://chat-platform-stefdev.netlify.app/login · https://github.com/stxfxno/chat-platform
+- **Simulador de Bonos Financieros** [Universitario, 2025 (marzo)] — Plataforma para gestionar bonos corporativos.\n\nAcceso de prueba:\n  · Usuario:  20123456789   ·  Contraseña: demo123\n  · Admin:    20100123456   ·  Contraseña: admin123 Tecnologías: React, Typescript, Tailwind. https://metodo-frances-grupo6.netlify.app/login · https://github.com/stxfxno/grupo-6-finanzas
+- **Una Distancia Corta** [Personal, 2025 (enero-febrero)] — Aplicación web para parejas o amigos a distancia que permite compartir imágenes con ubicación y fecha en un mapa global, facilitando la conexión entre personas en diferentes partes del mundo. Tecnologías: HTML, CSS, JavaScript, Firebase, Mi novia. https://unadistanciacorta.netlify.app/ · https://github.com/stxfxno/una-distancia-corta
+- **Sistema de Matrícula UPC** [Prueba/validación, 2024 (agosto-septiembre)] — Una nueva versión que simula la matrícula de la Universidad Peruana de Ciencias Aplicadas, con un diseño moderno y una interfaz intuitiva para facilitar el proceso de inscripción. Tecnologías: React, Tailwind, Typescript, Vite. https://matricula-upc-stefdev.netlify.app/ · https://github.com/stxfxno/matricula_upc
+- **AquaConecta** [Universitario, 2025 (abril)] — Landing page para una empresa de servcios de control de uso del agua. Incluye un diseño atractivo y funcional, optimizado para SEO y con integración de formularios de contacto. Tecnologías: HTML, CSS, JS, Figma. https://aquaconecta.netlify.app/ · https://github.com/stxfxno/Listify
+- **Manage Wise** [Universitario, 2024 (septiembre)] — Plataforma para la gestión y optimización de proyectos de desarrollo de software, con funcionalidades para coordinar equipos, visualizar sprints y monitorear el progreso en tiempo real. Tecnologías: HTML, CSS, JavaScript, Figma. https://manage-wise.netlify.app/ · https://github.com/DisenoDeExperimentos-4436-Grupo3/landing-page
+- **Listify MP3 Downloader** [Personal, 2024 (febrero)] — Listify es un programa en Python que te permite descargar las cancioens de quieras de tus playlist de Spotify, incluso todo un album o playlist completa. Solo necesitas el enlace o buscarlo entre las opciones de búsqueda. Tecnologías: Python, YouTube API, FFmpeg, Requests. https://github.com/stxfxno/Listify
+- **App Móvil simulador de ID Cards** [Prueba/validación, 2024 (octubre-noviembre)] — Aplicación móvil que simula la generación de ID Cards universitarias para evidenciar vulnerabilidades en sistemas de autenticación. Permite personalizar datos, códigos QR y fotografías para crear credenciales virtuales con fines educativos sobre seguridad. Tecnologías: Android Studio, Kotlin, XML, ZXing.
+- **Generador de Horarios Falsos** [Prueba/validación, 2024 (julio)] — Herramienta para evidenciar fallos de seguridad en el sistema de acceso universitario. Incluye opciones para configurar cursos, profesores, aulas y horarios, exportando el resultado final en un formato visual idéntico al oficial. Tecnologías: HTML, CSS, JavaScript, Canvas API. https://stefware-upc-horarios.netlify.app/
