@@ -13,11 +13,11 @@ const Skills = () => {
   const categories: SkillCategory[] = [
     {
       nameKey: "skills.languages",
-      skills: ["Python", "Java", "JavaScript", "TypeScript", "C++", "HTML/CSS"],
+      skills: ["Python", "Java", "JavaScript", "TypeScript", "HTML/CSS"],
     },
     {
       nameKey: "skills.frameworks",
-      skills: ["React", "Next.js", "NestJS", "React Native", "Expo Go", "Bootstrap", "Tailwind CSS"],
+      skills: ["React", "Next.js", "NestJS", "React Native", "Tailwind CSS"],
     },
     {
       nameKey: "skills.databases",
@@ -25,15 +25,15 @@ const Skills = () => {
     },
     {
       nameKey: "skills.tools",
-      skills: ["Git", "GitHub Desktop", "Android Studio", "Postman", "Swagger", "Trello", "Linear", "Odoo ERP"],
+      skills: ["Git", "Android Studio", "Postman", "Swagger", "Linear", "Odoo ERP"],
     },
     {
       nameKey: "skills.design",
-      skills: ["Figma", "Canva", "Illustrator", "CapCut"],
+      skills: ["Figma", "Illustrator"],
     },
     {
       nameKey: "skills.others",
-      skills: ["API RESTful", "SUNAT API", "Cron Jobs", "Vercel", "Netlify", "Render", "Railway", "Hostinger", "MS Office", "OBS Studio"],
+      skills: ["SUNAT API", "Vercel", "Render", "Railway"],
     },
   ];
 

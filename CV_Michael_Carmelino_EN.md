@@ -14,7 +14,7 @@ carmelino0213@gmail.com • linkedin.com/in/michael-carmelino-dueñas • github
 Python • Java • JavaScript • TypeScript • C++ • HTML/CSS
 
 **Frameworks & Libraries**
-React • Next.js • NestJS • React Native • Expo Go • Tailwind CSS • Bootstrap
+React • Next.js • NestJS • React Native • Tailwind CSS
 
 **Databases**
 MySQL • SQL Server • MongoDB • Firebase • Supabase

@@ -14,7 +14,7 @@ Estudiante de 5to año de Ingeniería de Software con experiencia práctica en d
 Python • Java • JavaScript • TypeScript • C++ • HTML/CSS
 
 **Frameworks y Librerías**
-React • Next.js • NestJS • React Native • Expo Go • Tailwind CSS • Bootstrap
+React • Next.js • NestJS • React Native • Tailwind CSS
 
 **Bases de Datos**
 MySQL • SQL Server • MongoDB • Firebase • Supabase
