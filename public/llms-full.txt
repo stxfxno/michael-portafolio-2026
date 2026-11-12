@@ -33,9 +33,10 @@ Contacto: carmelino0213@gmail.com · GitHub: https://github.com/stxfxno · Linke
 
 ## Proyectos destacados
 - **Sin Propósito** (Nov 2026): app móvil (Android + iPhone vía web) para cumplir metas de vida en árbol de tareas y subtareas, límites de apps con módulo nativo Kotlin (UsageStatsManager + bloqueo), sugerencias en ratos libres, modo enfoque, hábitos, puntos y amigos; offline-first. React Native, Expo, TypeScript, Supabase, Kotlin.
+- **Software Eemerson SAC** (2025 - 2026): plataforma web interna de una empresa de transporte de contenedores. Pagos con lectura de comprobantes por IA (GPT-4o) y calendario de pagos recurrentes; servicios leídos en vivo de Odoo con el avance de cada conductor (hora, mapa GPS y fotos por hito); geoenlaces de flota en Navitel; alertas de vencimiento de documentos por correo; vacaciones y asistencia; consulta de guías de remisión SUNAT y conciliación de detracciones. 5 roles y permisos por módulo con RLS. Next.js, TypeScript, Supabase, Tailwind, shadcn/ui, Odoo JSON-RPC. Privado (cliente).
+- **App Conductores Eemerson SAC** (2025 - 2026): app móvil instalable (PWA) para los conductores de la misma empresa: servicios del mes, hitos según el tipo de servicio (7 tipos, 41 hitos en el catálogo) marcados con hora, GPS y foto obligatoria en puntos críticos y escritos en Odoo, elección de quién devuelve el contenedor vacío, gastos con foto del ticket, asistencia por ubicación, documentos por vencer y vacaciones. Next.js, TypeScript, Supabase, Odoo. Privado (cliente).
 - **Gestión Documental BIM** (Abr 2026): flujo de aprobación de planos/modelos para equipos de construcción, ciclo de 5 etapas con roles (Coordinador BIM, Aprobador, Residente de obra), offline-first con IndexedDB. React, TypeScript, Tailwind, Supabase.
 - **Sprinta AI** (Mar 2026): agente de IA para ventas por WhatsApp con CRM integrado. React, TypeScript, Tailwind, Supabase. https://sprinta.ai/landing
-- **Plataforma Eemerson SAC** (Nov 2025 - Feb 2026): ver Experiencia. Next.js 14, TypeScript, Supabase.
 - **Renaceris Plataforma** (Ene - Abr 2026): gestión de citas médicas con roles de recepcionista y médico en 3 sedes. React, NestJS, TypeScript, Supabase.
 
 ## Otros proyectos

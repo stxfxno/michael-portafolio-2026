@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { ArrowUpRight, LayoutGrid } from 'lucide-react';
 import AppCaseStudy from './AppCaseStudy';
+import type { CaseStudy } from '../data/caseStudy';
+import { sinProposito } from '../data/sinProposito';
+import { eemersonSoftware } from '../data/eemersonSoftware';
+import { eemersonConductores } from '../data/eemersonConductores';
 import ProjectArchive from './ProjectArchive';
 import SectionTitle from './SectionTitle';
 import Reveal from './Reveal';
@@ -15,7 +19,7 @@ interface Project {
   image: string;
   viewnow?: boolean;
   fullColor?: boolean; // sin filtro en blanco y negro
-  caseStudy?: boolean; // abre la vista completa con menú al hacer clic
+  caseStudy?: CaseStudy; // abre la vista completa con menú al hacer clic
   badge?: string;
   links: {
     live?: string;
@@ -108,7 +112,7 @@ const ProjectRow = ({ project, index, onOpen }: { project: Project; index: numbe
 
 const Projects = () => {
   const { t, language } = useLanguage();
-  const [caseOpen, setCaseOpen] = useState(false);
+  const [study, setStudy] = useState<CaseStudy | null>(null);
 
   // Datos de proyectos con traducción condicional
   const projects: Project[] = language === 'es' ? [
@@ -120,7 +124,29 @@ const Projects = () => {
       technologies: ["React Native", "Expo", "TypeScript", "Supabase", "Kotlin"],
       image: "/images/sin-proposito/cover.webp",
       fullColor: true,
-      caseStudy: true,
+      caseStudy: sinProposito,
+      links: {}
+    },
+    {
+      title: "Software Eemerson SAC",
+      badge: "Plataforma web · Equipo de oficina",
+      description: "Plataforma interna de una empresa de transporte de contenedores que junta en un solo lugar pagos con lectura automática de comprobantes, los servicios de Odoo con el avance de cada conductor (hora, mapa GPS y fotos por hito), geoenlaces de la flota en Navitel, alertas de vencimiento de documentos, vacaciones, asistencia y guías de remisión de SUNAT. Permisos por rol y por módulo.",
+      period: "2025 - 2026",
+      technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind", "Odoo API"],
+      image: "/images/eemerson-software/cover.webp",
+      fullColor: true,
+      caseStudy: eemersonSoftware,
+      links: {}
+    },
+    {
+      title: "App Conductores Eemerson SAC",
+      badge: "App móvil · Portal del conductor (PWA)",
+      description: "App que usan los conductores en ruta: ven sus servicios del mes, marcan cada hito con hora, GPS y foto obligatoria en los puntos críticos (todo se escribe en Odoo), eligen quién devuelve el contenedor vacío, registran sus gastos con la foto del ticket y revisan sus documentos por vencer, su asistencia y sus vacaciones.",
+      period: "2025 - 2026",
+      technologies: ["Next.js", "TypeScript", "Supabase", "PWA", "Odoo API"],
+      image: "/images/eemerson-conductores/cover.webp",
+      fullColor: true,
+      caseStudy: eemersonConductores,
       links: {}
     },
     {
@@ -143,14 +169,6 @@ const Projects = () => {
       }
     },
     {
-      title: "Plataforma — Eemerson SAC",
-      description: "Plataforma web de gestión operativa para empresa de transporte de carga. Centraliza pagos a conductores (exportable a Excel), flota GPS vía Navitel, integración SUNAT OAuth para GRE, alertas de vencimientos sincronizadas con Odoo ERP, y un portal móvil-first para conductores con OCR y registro de gastos.",
-      period: "Nov 2025 - Feb 2026",
-      technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind", "shadcn/ui"],
-      image: "/images/eemersonsac_plataforma.webp",
-      links: {}
-    },
-    {
       title: "Renaceris Plataforma",
       description: "Plataforma para la gestión de citas médicas de Renaceris, con roles diferenciados para recepcionistas y médicos, facilitando el control y seguimiento de pacientes en las 3 sedes.",
       period: "Ene - Abr 2026",
@@ -168,7 +186,29 @@ const Projects = () => {
       technologies: ["React Native", "Expo", "TypeScript", "Supabase", "Kotlin"],
       image: "/images/sin-proposito/cover.webp",
       fullColor: true,
-      caseStudy: true,
+      caseStudy: sinProposito,
+      links: {}
+    },
+    {
+      title: "Software Eemerson SAC",
+      badge: "Web platform · Office team",
+      description: "Internal platform for a container transport company that brings together payments with automatic receipt reading, Odoo services with each driver’s progress (time, GPS map and photos per milestone), Navitel fleet share links, document expiry alerts, vacations, attendance and SUNAT shipping guides. Permissions per role and per module.",
+      period: "2025 - 2026",
+      technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind", "Odoo API"],
+      image: "/images/eemerson-software/cover.webp",
+      fullColor: true,
+      caseStudy: eemersonSoftware,
+      links: {}
+    },
+    {
+      title: "App Conductores Eemerson SAC",
+      badge: "Mobile app · Driver portal (PWA)",
+      description: "The app drivers use on the road: they see the month’s services, mark every milestone with time, GPS and a required photo at critical points (all written to Odoo), choose who returns the empty container, log expenses with a photo of the ticket and check their expiring documents, attendance and vacations.",
+      period: "2025 - 2026",
+      technologies: ["Next.js", "TypeScript", "Supabase", "PWA", "Odoo API"],
+      image: "/images/eemerson-conductores/cover.webp",
+      fullColor: true,
+      caseStudy: eemersonConductores,
       links: {}
     },
     {
@@ -189,14 +229,6 @@ const Projects = () => {
       links: {
         live: "https://sprinta.ai/landing"
       }
-    },
-    {
-      title: "Platform — Eemerson SAC",
-      description: "Operational management web platform for a freight transport company. Centralizes driver payments (exportable to Excel), GPS fleet tracking via Navitel, SUNAT OAuth integration for e-invoices, document expiry alerts synced with Odoo ERP, and a mobile-first driver portal with OCR and expense tracking.",
-      period: "Nov 2025 - Feb 2026",
-      technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind", "shadcn/ui"],
-      image: "/images/eemersonsac_plataforma.webp",
-      links: {}
     },
     {
       title: "Renaceris Plataforma",
@@ -220,13 +252,13 @@ const Projects = () => {
       <div>
         {projects.map((project, index) => (
           <Reveal key={project.title}>
-            <ProjectRow project={project} index={index} onOpen={project.caseStudy ? () => setCaseOpen(true) : undefined} />
+            <ProjectRow project={project} index={index} onOpen={project.caseStudy ? () => setStudy(project.caseStudy!) : undefined} />
           </Reveal>
         ))}
       </div>
 
       <ProjectArchive />
-      <AppCaseStudy open={caseOpen} onClose={() => setCaseOpen(false)} />
+      <AppCaseStudy study={study} onClose={() => setStudy(null)} />
     </section>
   );
 };

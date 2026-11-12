@@ -1,24 +1,11 @@
 // Contenido del caso de estudio de "Sin Propósito" (app móvil), en español e inglés.
 // Las capturas están en /public/images/sin-proposito y salen del código actual de la app (Expo, versión web).
 
-type Lang = 'es' | 'en';
-type L = Record<Lang, string>;
-
-export type CaseSectionId = 'overview' | 'screens' | 'features' | 'points' | 'tech' | 'design' | 'friends';
+import type { CaseStudy, L, Screen } from './caseStudy';
 
 export const IMG = '/images/sin-proposito';
 
-export const caseMenu: { id: CaseSectionId; label: L }[] = [
-  { id: 'overview', label: { es: 'Resumen', en: 'Overview' } },
-  { id: 'screens', label: { es: 'Pantallas', en: 'Screens' } },
-  { id: 'features', label: { es: 'Funciones', en: 'Features' } },
-  { id: 'points', label: { es: 'Puntos y hábitos', en: 'Points & habits' } },
-  { id: 'friends', label: { es: 'Amigos y privacidad', en: 'Friends & privacy' } },
-  { id: 'design', label: { es: 'Diseño y colores', en: 'Design & colors' } },
-  { id: 'tech', label: { es: 'Arquitectura', en: 'Architecture' } },
-];
-
-export const overview = {
+const overview = {
   tagline: {
     es: 'Cumple tus metas de vida dividiéndolas en pasos pequeños, limita las apps que te distraen y aprovecha tus ratos libres.',
     en: 'Reach your life goals by breaking them into small steps, limit the apps that distract you and make the most of your free time.',
@@ -45,9 +32,7 @@ export const overview = {
   ],
 };
 
-export type Screen = { src: string; title: L; caption: L };
-
-export const screens: Screen[] = [
+const screens: Screen[] = [
   {
     src: `${IMG}/hoy.webp`,
     title: { es: 'Hoy', en: 'Today' },
@@ -138,7 +123,7 @@ export const screens: Screen[] = [
   },
 ];
 
-export const features: { icon: string; title: L; body: L }[] = [
+const features: { icon: string; title: L; body: L }[] = [
   {
     icon: 'tree',
     title: { es: 'Metas en árbol', en: 'Goal trees' },
@@ -205,18 +190,18 @@ export const features: { icon: string; title: L; body: L }[] = [
   },
 ];
 
-export const pointsRules: { what: L; pts: string; good: boolean }[] = [
-  { what: { es: 'Completar una tarea', en: 'Complete a task' }, pts: '+10', good: true },
-  { what: { es: 'Cumplir un hábito (más con racha)', en: 'Do a habit (more with a streak)' }, pts: '+5', good: true },
-  { what: { es: 'Cada 5 min de enfoque', en: 'Every 5 min of focus' }, pts: '+1', good: true },
-  { what: { es: 'Terminar un bloque de enfoque', en: 'Finish a focus block' }, pts: '+5', good: true },
-  { what: { es: 'Hacer la revisión semanal', en: 'Do the weekly review' }, pts: '+20', good: true },
-  { what: { es: 'Recibir un ánimo de un amigo', en: 'Get a cheer from a friend' }, pts: '+2', good: true },
-  { what: { es: 'Cada 15 min sobre el límite de una app', en: 'Every 15 min over an app limit' }, pts: '−5', good: false },
-  { what: { es: 'Abrir una app con límite durante el enfoque', en: 'Open a limited app during focus' }, pts: '−10', good: false },
+const pointsRules: { what: L; value: string; good: boolean }[] = [
+  { what: { es: 'Completar una tarea', en: 'Complete a task' }, value: '+10', good: true },
+  { what: { es: 'Cumplir un hábito (más con racha)', en: 'Do a habit (more with a streak)' }, value: '+5', good: true },
+  { what: { es: 'Cada 5 min de enfoque', en: 'Every 5 min of focus' }, value: '+1', good: true },
+  { what: { es: 'Terminar un bloque de enfoque', en: 'Finish a focus block' }, value: '+5', good: true },
+  { what: { es: 'Hacer la revisión semanal', en: 'Do the weekly review' }, value: '+20', good: true },
+  { what: { es: 'Recibir un ánimo de un amigo', en: 'Get a cheer from a friend' }, value: '+2', good: true },
+  { what: { es: 'Cada 15 min sobre el límite de una app', en: 'Every 15 min over an app limit' }, value: '−5', good: false },
+  { what: { es: 'Abrir una app con límite durante el enfoque', en: 'Open a limited app during focus' }, value: '−10', good: false },
 ];
 
-export const pointsNotes: L[] = [
+const pointsNotes: L[] = [
   {
     es: 'Los puntos no se editan directo: cada suma o resta es una fila en el historial y un trigger de Postgres mantiene el total.',
     en: 'Points are never edited directly: every change is a history row and a Postgres trigger keeps the total.',
@@ -231,7 +216,7 @@ export const pointsNotes: L[] = [
   },
 ];
 
-export const friends: { title: L; body: L }[] = [
+const friends: { title: L; body: L }[] = [
   {
     title: { es: 'Invitar', en: 'Invite' },
     body: {
@@ -262,7 +247,7 @@ export const friends: { title: L; body: L }[] = [
   },
 ];
 
-export const design = {
+const design = {
   intro: {
     es: 'Estilo monocromo inspirado en apps de respiración: fondo negro, contornos finos, anillos y tipografía ligera. Cada persona puede elegir su color principal, secundario y de fondo.',
     en: 'Monochrome style inspired by breathwork apps: black background, thin outlines, rings and light type. Each person can pick their own primary, secondary and background colors.',
@@ -279,14 +264,14 @@ export const design = {
   ] as L[],
 };
 
-export const stack: { group: L; items: string[] }[] = [
+const stack: { group: L; items: string[] }[] = [
   { group: { es: 'App', en: 'App' }, items: ['React Native 0.88', 'Expo SDK 58', 'Expo Router', 'TypeScript', 'Zustand', 'Reanimated 4'] },
   { group: { es: 'Nativo (Android)', en: 'Native (Android)' }, items: ['Kotlin · Expo Modules', 'UsageStatsManager', 'AccessibilityService', 'Jetpack Compose widget'] },
   { group: { es: 'Backend', en: 'Backend' }, items: ['Supabase', 'PostgreSQL', 'Row Level Security', 'Triggers', 'Auth'] },
   { group: { es: 'Entrega', en: 'Delivery' }, items: ['EAS Build', 'Vercel (web + App Links)', 'PWA para iPhone'] },
 ];
 
-export const architecture: { title: L; body: L }[] = [
+const architecture: { title: L; body: L }[] = [
   {
     title: { es: 'Offline-first', en: 'Offline-first' },
     body: {
@@ -317,7 +302,7 @@ export const architecture: { title: L; body: L }[] = [
   },
 ];
 
-export const tables: { name: string; what: L }[] = [
+const tables: { name: string; what: L }[] = [
   { name: 'sp_goals', what: { es: 'árbol de metas (parent_id, borrado en cascada)', en: 'goal tree (parent_id, cascade delete)' } },
   { name: 'sp_app_limits', what: { es: 'límites diarios por app', en: 'daily limits per app' } },
   { name: 'sp_app_usage_daily', what: { es: 'uso diario y penalizaciones cobradas', en: 'daily usage and charged penalties' } },
@@ -327,3 +312,71 @@ export const tables: { name: string; what: L }[] = [
   { name: 'sp_weekly_reviews', what: { es: 'revisión semanal y prioridades', en: 'weekly review and priorities' } },
   { name: 'sp_friendships · sp_cheers', what: { es: 'amistades y ánimos', en: 'friendships and cheers' } },
 ];
+
+export const sinProposito: CaseStudy = {
+  id: 'sin-proposito',
+  name: 'Sin Propósito',
+  kicker: { es: 'Caso de estudio · App móvil', en: 'Case study · Mobile app' },
+  icon: `${IMG}/icon.webp`,
+  cover: `${IMG}/cover.webp`,
+  frame: 'phone',
+  stack: 'React Native · Expo · TypeScript · Supabase · Kotlin',
+  overview,
+  screens,
+  features,
+  sections: [
+    {
+      id: 'points',
+      label: { es: 'Puntos y hábitos', en: 'Points & habits' },
+      intro: {
+        es: 'Todo lo que te acerca a tus metas suma; distraerte resta. Los puntos se canjean por premios que tú defines.',
+        en: 'Everything that moves you toward your goals adds up; getting distracted takes points away. Points are redeemed for rewards you define.',
+      },
+      blocks: [
+        { kind: 'rules', rows: pointsRules },
+        { kind: 'bullets', items: pointsNotes },
+      ],
+      aside: [`${IMG}/actividades.webp`, `${IMG}/recompensas.webp`],
+    },
+    {
+      id: 'friends',
+      label: { es: 'Amigos y privacidad', en: 'Friends & privacy' },
+      intro: {
+        es: 'Tener a alguien viendo tu progreso ayuda a no rendirse, pero el uso del teléfono es privado. Por eso los amigos solo ven lo que tú decides.',
+        en: 'Having someone see your progress helps you not give up, but phone usage is private. That is why friends only see what you decide.',
+      },
+      blocks: [{ kind: 'numbered', items: friends }],
+    },
+    {
+      id: 'design',
+      label: { es: 'Diseño y colores', en: 'Design & colors' },
+      intro: design.intro,
+      blocks: [
+        {
+          kind: 'text',
+          muted: true,
+          body: {
+            es: 'Izquierda: el tema por defecto (negro y blanco). Derecha: la misma pantalla con un tema violeta elegido desde Colores.',
+            en: 'Left: the default theme (black and white). Right: the same screen with a violet theme picked in Colors.',
+          },
+        },
+        {
+          kind: 'pairs',
+          pairs: design.pairs,
+          suffix: { es: 'por defecto / tema violeta', en: 'default / violet theme' },
+          alt: [{ es: 'monocromo', en: 'monochrome' }, { es: 'violeta', en: 'violet' }],
+        },
+        { kind: 'bullets', items: design.details, image: `${IMG}/colores.webp` },
+      ],
+    },
+    {
+      id: 'tech',
+      label: { es: 'Arquitectura', en: 'Architecture' },
+      blocks: [
+        { kind: 'chips', groups: stack },
+        { kind: 'cards', items: architecture },
+        { kind: 'table', label: { es: 'Algunas tablas (Supabase)', en: 'Some tables (Supabase)' }, rows: tables },
+      ],
+    },
+  ],
+};
