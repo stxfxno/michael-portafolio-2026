@@ -12,17 +12,21 @@ import {
   FileSpreadsheet,
   FileText,
   Fingerprint,
+  Hand,
   Hourglass,
   Landmark,
   LayoutGrid,
   Link2,
   MapPin,
   Megaphone,
+  Mic,
   Minus,
   Network,
+  QrCode,
   Receipt,
   Route,
   ScanText,
+  GraduationCap,
   ShieldCheck,
   Smartphone,
   Sparkles,
@@ -30,8 +34,11 @@ import {
   Timer,
   Truck,
   Users,
+  Vibrate,
+  Volume2,
   Wallet,
   X,
+  BarChart3,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -64,6 +71,13 @@ const featureIcons: Record<string, LucideIcon> = {
   bank: Landmark,
   megaphone: Megaphone,
   phone: Smartphone,
+  hand: Hand,
+  mic: Mic,
+  qr: QrCode,
+  school: GraduationCap,
+  vibrate: Vibrate,
+  volume: Volume2,
+  chart: BarChart3,
 };
 
 /** Captura dentro de un marco de teléfono. */
@@ -336,7 +350,13 @@ const AppCaseStudy = ({ study, onClose }: Props) => {
   if (!study) return null;
 
   const { frame, screens, overview } = study;
-  const phone = frame === 'phone';
+  const frameOf = (i: number): Frame => screens[i].frame ?? frame;
+  // Si las pantallas mezclan marcos (móvil + web) la galería se separa en grupos.
+  const groups = (['phone', 'browser'] as Frame[])
+    .map((f) => ({ f, items: screens.map((sc, i) => ({ sc, i })).filter(({ i }) => frameOf(i) === f) }))
+    .filter((g) => g.items.length > 0);
+  const curFrame: Frame = shot !== null ? frameOf(shot) : frame;
+  const curPhone = curFrame === 'phone';
   const menu = [
     { id: 'overview', label: { es: 'Resumen', en: 'Overview' } },
     { id: 'screens', label: { es: 'Pantallas', en: 'Screens' } },
@@ -346,6 +366,7 @@ const AppCaseStudy = ({ study, onClose }: Props) => {
   const idx = menu.findIndex((m) => m.id === section);
   const next = menu[(idx + 1) % menu.length];
   const custom = study.sections.find((s) => s.id === section);
+  const asidePhone = (custom?.asideFrame ?? frame) === 'phone';
 
   return (
     <div className="fixed inset-0 z-[70] bg-ink/85 backdrop-blur-sm sm:p-6 flex items-stretch justify-center" onClick={onClose}>
@@ -449,34 +470,41 @@ const AppCaseStudy = ({ study, onClose }: Props) => {
                     <p className="text-paper/60 mb-6 text-sm">
                       {es ? 'Toca una pantalla para verla en grande.' : 'Tap a screen to see it larger.'}
                     </p>
-                    <ul className={`grid gap-x-5 gap-y-8 ${phone ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4' : 'grid-cols-1 sm:grid-cols-2'}`}>
-                      {screens.map((s, i) => (
-                        <li key={s.src}>
-                          <button onClick={() => setShot(i)} className="group block w-full text-left">
-                            <Shot frame={frame} src={s.src} alt={s.title[lang]} className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:border-violet" />
-                            <p className="mt-3 text-sm font-medium group-hover:text-violet transition-colors">
-                              <span className="font-mono text-[0.65rem] text-paper/40 mr-2">{String(i + 1).padStart(2, '0')}</span>
-                              {s.title[lang]}
-                            </p>
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
+                    {groups.map((g) => (
+                      <div key={g.f} className="mb-10 last:mb-0">
+                        {groups.length > 1 && study.screenGroups && (
+                          <p className="tag text-violet mb-4">{study.screenGroups[g.f][lang]}</p>
+                        )}
+                        <ul className={`grid gap-x-5 gap-y-8 ${g.f === 'phone' ? 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4' : 'grid-cols-1 sm:grid-cols-2'}`}>
+                          {g.items.map(({ sc, i }) => (
+                            <li key={sc.src}>
+                              <button onClick={() => setShot(i)} className="group block w-full text-left">
+                                <Shot frame={g.f} src={sc.src} alt={sc.title[lang]} className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:border-violet" />
+                                <p className="mt-3 text-sm font-medium group-hover:text-violet transition-colors">
+                                  <span className="font-mono text-[0.65rem] text-paper/40 mr-2">{String(i + 1).padStart(2, '0')}</span>
+                                  {sc.title[lang]}
+                                </p>
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
                   </>
                 ) : (
-                  <div className={phone ? '' : 'max-w-3xl mx-auto'}>
+                  <div className={curPhone ? '' : 'max-w-3xl mx-auto'}>
                     <button onClick={() => setShot(null)} className="link-arrow mb-6">
                       <ChevronLeft size={14} /> {es ? 'Todas las pantallas' : 'All screens'}
                     </button>
-                    <div className={`grid gap-8 items-center ${phone ? 'md:grid-cols-[minmax(0,320px)_1fr]' : 'grid-cols-1'}`}>
-                      <Shot frame={frame} src={screens[shot].src} alt={screens[shot].title[lang]} className={phone ? 'max-w-[300px] w-full mx-auto' : 'w-full'} />
-                      <div className={phone ? '' : 'flex flex-col sm:flex-row sm:items-end gap-6 sm:justify-between'}>
+                    <div className={`grid gap-8 items-center ${curPhone ? 'md:grid-cols-[minmax(0,320px)_1fr]' : 'grid-cols-1'}`}>
+                      <Shot frame={curFrame} src={screens[shot].src} alt={screens[shot].title[lang]} className={curPhone ? 'max-w-[300px] w-full mx-auto' : 'w-full'} />
+                      <div className={curPhone ? '' : 'flex flex-col sm:flex-row sm:items-end gap-6 sm:justify-between'}>
                         <div>
                           <p className="tag text-violet mb-2">
                             {String(shot + 1).padStart(2, '0')} / {String(screens.length).padStart(2, '0')}
                           </p>
                           <h5 className="font-display uppercase text-4xl leading-none mb-4">{screens[shot].title[lang]}</h5>
-                          <p className={`text-paper/75 leading-relaxed max-w-xl ${phone ? 'mb-8' : ''}`}>{screens[shot].caption[lang]}</p>
+                          <p className={`text-paper/75 leading-relaxed max-w-xl ${curPhone ? 'mb-8' : ''}`}>{screens[shot].caption[lang]}</p>
                         </div>
                         <div className="flex gap-3 shrink-0">
                           <button
@@ -498,13 +526,13 @@ const AppCaseStudy = ({ study, onClose }: Props) => {
                     </div>
                     <ul className="flex gap-3 overflow-x-auto mt-10 pb-2">
                       {screens.map((s, i) => (
-                        <li key={s.src} className={`shrink-0 ${phone ? 'w-16' : 'w-28'}`}>
+                        <li key={s.src} className={`shrink-0 ${frameOf(i) === 'phone' ? 'w-16' : 'w-28'}`}>
                           <button
                             onClick={() => setShot(i)}
                             aria-label={s.title[lang]}
                             className={`block w-full border-2 rounded-lg overflow-hidden transition-colors ${i === shot ? 'border-violet' : 'border-transparent opacity-50 hover:opacity-100'}`}
                           >
-                            <img src={s.src} alt="" loading="lazy" className={`block w-full object-cover object-top ${phone ? 'aspect-[390/844]' : 'aspect-[16/10]'}`} />
+                            <img src={s.src} alt="" loading="lazy" className={`block w-full object-cover object-top ${frameOf(i) === 'phone' ? 'aspect-[390/844]' : 'aspect-[16/10]'}`} />
                           </button>
                         </li>
                       ))}
@@ -525,16 +553,16 @@ const AppCaseStudy = ({ study, onClose }: Props) => {
               <div>
                 <H>{custom.label[lang]}</H>
                 {custom.aside ? (
-                  <div className={`grid gap-8 items-start ${phone ? 'lg:grid-cols-[1fr_260px]' : 'xl:grid-cols-[1fr_340px]'}`}>
+                  <div className={`grid gap-8 items-start ${asidePhone ? 'lg:grid-cols-[1fr_260px]' : 'xl:grid-cols-[1fr_340px]'}`}>
                     <div>
                       {custom.intro && <p className="text-paper/70 leading-relaxed mb-6">{custom.intro[lang]}</p>}
                       {custom.blocks.map((b, i) => (
                         <BlockView key={i} block={b} lang={lang} frame={frame} />
                       ))}
                     </div>
-                    <div className={`grid gap-4 ${phone ? 'grid-cols-2 lg:grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-1'}`}>
+                    <div className={`grid gap-4 ${asidePhone ? 'grid-cols-2 lg:grid-cols-1' : 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-1'}`}>
                       {custom.aside.map((src) => (
-                        <Shot key={src} frame={frame} src={src} alt="" />
+                        <Shot key={src} frame={custom.asideFrame ?? frame} src={src} alt="" />
                       ))}
                     </div>
                   </div>

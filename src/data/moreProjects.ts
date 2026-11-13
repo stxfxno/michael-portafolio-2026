@@ -66,18 +66,6 @@ const es: MoreProject[] = [
     }
   },
   {
-    title: "HapticLearn",
-    category: "thesis",
-    description: "Panel de una app que ayuda a niñas y niños con discapacidad visual a trazar letras y números con el dedo, guiados por vibraciones y voz. Pensada para colegios inclusivos del Perú y compatible con TalkBack.",
-    period: "2026 (septiembre)",
-    technologies: ["Vite", "Accesibilidad", "TalkBack"],
-    image: "/images/haptic_learn.webp",
-    viewnow: true,
-    links: {
-      live: "https://haptic-learn-panel-main.vercel.app/"
-    }
-  },
-  {
     title: "Tapy",
     category: "own",
     description: "Plataforma NFC/QR para conseguir reseñas de Google al instante. Un toque y el cliente llega a tu página con tus redes, catálogo y WhatsApp.",
@@ -336,18 +324,6 @@ const en: MoreProject[] = [
     viewnow: true,
     links: {
       live: "https://github.michaelcarmelino.com/"
-    }
-  },
-  {
-    title: "HapticLearn",
-    category: "thesis",
-    description: "Dashboard for an app that helps visually impaired children trace letters and numbers with their finger, guided by vibration and voice. Built for inclusive schools in Peru and compatible with TalkBack.",
-    period: "2026 (September)",
-    technologies: ["Vite", "Accesibilidad", "TalkBack"],
-    image: "/images/haptic_learn.webp",
-    viewnow: true,
-    links: {
-      live: "https://haptic-learn-panel-main.vercel.app/"
     }
   },
   {

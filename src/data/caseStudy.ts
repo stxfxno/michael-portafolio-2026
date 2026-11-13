@@ -7,7 +7,8 @@ export type L = Record<Lang, string>;
 /** Marco de las capturas: teléfono (apps móviles) o navegador (web, 16:10). */
 export type Frame = 'phone' | 'browser';
 
-export type Screen = { src: string; title: L; caption: L };
+/** `frame` solo hace falta cuando un proyecto mezcla marcos (app móvil + panel web); si falta se usa el del proyecto. */
+export type Screen = { src: string; title: L; caption: L; frame?: Frame };
 
 export type Block =
   | { kind: 'text'; body: L; muted?: boolean }
@@ -28,6 +29,8 @@ export type Section = {
   blocks: Block[];
   /** Capturas que acompañan la sección en una columna lateral. */
   aside?: string[];
+  /** Marco de las capturas laterales; por defecto el del proyecto. */
+  asideFrame?: Frame;
 };
 
 export type CaseStudy = {
@@ -46,6 +49,8 @@ export type CaseStudy = {
     numbers: { n: string; l: L }[];
   };
   screens: Screen[];
+  /** Títulos de grupo en la galería cuando las pantallas mezclan marcos (teléfono y navegador). */
+  screenGroups?: { phone: L; browser: L };
   features: { icon: string; title: L; body: L }[];
   /** Secciones propias del proyecto; van después de Resumen, Pantallas y Funciones. */
   sections: Section[];

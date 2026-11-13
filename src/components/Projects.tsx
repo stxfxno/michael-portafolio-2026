@@ -3,6 +3,7 @@ import { ArrowUpRight, LayoutGrid } from 'lucide-react';
 import AppCaseStudy from './AppCaseStudy';
 import type { CaseStudy } from '../data/caseStudy';
 import { sinProposito } from '../data/sinProposito';
+import { hapticLearn } from '../data/hapticLearn';
 import { eemersonSoftware } from '../data/eemersonSoftware';
 import { eemersonConductores } from '../data/eemersonConductores';
 import ProjectArchive from './ProjectArchive';
@@ -21,6 +22,8 @@ interface Project {
   fullColor?: boolean; // sin filtro en blanco y negro
   caseStudy?: CaseStudy; // abre la vista completa con menú al hacer clic
   badge?: string;
+  liveLabel?: string; // texto propio para el enlace de demo
+  githubLabel?: string; // texto propio para el enlace del repositorio
   links: {
     live?: string;
     github?: string;
@@ -83,12 +86,12 @@ const ProjectRow = ({ project, index, onOpen }: { project: Project; index: numbe
           )}
           {project.links.live && (
             <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="link-arrow">
-              {project.viewnow ? t('projects.viewnow') : t('projects.demo')} <ArrowUpRight size={14} />
+              {project.liveLabel ?? (project.viewnow ? t('projects.viewnow') : t('projects.demo'))} <ArrowUpRight size={14} />
             </a>
           )}
           {project.links.github && (
             <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="link-arrow">
-              {t('projects.repository')} <ArrowUpRight size={14} />
+              {project.githubLabel ?? t('projects.repository')} <ArrowUpRight size={14} />
             </a>
           )}
           {project.links.figma && (
@@ -126,6 +129,22 @@ const Projects = () => {
       fullColor: true,
       caseStudy: sinProposito,
       links: {}
+    },
+    {
+      title: "HapticLearn",
+      badge: "App móvil + panel web · Tesis universitaria",
+      description: "App para que niñas y niños con discapacidad visual aprendan a trazar letras y números con el dedo, guiados por vibraciones y voz (compatible con TalkBack). Los docentes crean aulas y cursos, inscriben alumnos con un QR y ven su nivel; un panel web deja a directoras y administradores gestionar colegios, usuarios, salones y los propios patrones de vibración. App móvil con repositorio privado; panel web público.",
+      period: "2026",
+      technologies: ["React Native", "Expo", "TypeScript", "React", "Vite", "Supabase"],
+      image: "/images/haptic-learn/cover.webp",
+      fullColor: true,
+      caseStudy: hapticLearn,
+      liveLabel: "Panel web",
+      githubLabel: "Repo del panel",
+      links: {
+        live: "https://haptic-learn-panel-main.vercel.app/",
+        github: "https://github.com/Haptic-Learn-Michael/haptic-learn-panel-main"
+      }
     },
     {
       title: "Software Eemerson SAC",
@@ -188,6 +207,22 @@ const Projects = () => {
       fullColor: true,
       caseStudy: sinProposito,
       links: {}
+    },
+    {
+      title: "HapticLearn",
+      badge: "Mobile app + web panel · University thesis",
+      description: "App that helps children with visual impairments learn to trace letters and numbers with their finger, guided by vibration and voice (TalkBack compatible). Teachers create classrooms and courses, enroll students with a QR and see their level; a web panel lets principals and administrators manage schools, users, classrooms and the vibration patterns themselves. Mobile app repository is private; the web panel is public.",
+      period: "2026",
+      technologies: ["React Native", "Expo", "TypeScript", "React", "Vite", "Supabase"],
+      image: "/images/haptic-learn/cover.webp",
+      fullColor: true,
+      caseStudy: hapticLearn,
+      liveLabel: "Web panel",
+      githubLabel: "Panel repo",
+      links: {
+        live: "https://haptic-learn-panel-main.vercel.app/",
+        github: "https://github.com/Haptic-Learn-Michael/haptic-learn-panel-main"
+      }
     },
     {
       title: "Software Eemerson SAC",
