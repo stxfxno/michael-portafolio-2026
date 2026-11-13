@@ -39,6 +39,8 @@ import {
   Wallet,
   X,
   BarChart3,
+  FileQuestion,
+  MessageCircle,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -78,6 +80,8 @@ const featureIcons: Record<string, LucideIcon> = {
   vibrate: Vibrate,
   volume: Volume2,
   chart: BarChart3,
+  help: FileQuestion,
+  chat: MessageCircle,
 };
 
 /** Captura dentro de un marco de teléfono. */
@@ -554,7 +558,7 @@ const AppCaseStudy = ({ study, onClose }: Props) => {
                 <H>{custom.label[lang]}</H>
                 {custom.aside ? (
                   <div className={`grid gap-8 items-start ${asidePhone ? 'lg:grid-cols-[1fr_260px]' : 'xl:grid-cols-[1fr_340px]'}`}>
-                    <div>
+                    <div className="min-w-0">
                       {custom.intro && <p className="text-paper/70 leading-relaxed mb-6">{custom.intro[lang]}</p>}
                       {custom.blocks.map((b, i) => (
                         <BlockView key={i} block={b} lang={lang} frame={frame} />

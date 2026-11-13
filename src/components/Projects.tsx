@@ -6,6 +6,7 @@ import { sinProposito } from '../data/sinProposito';
 import { hapticLearn } from '../data/hapticLearn';
 import { eemersonSoftware } from '../data/eemersonSoftware';
 import { eemersonConductores } from '../data/eemersonConductores';
+import { platformCivil } from '../data/platformCivil';
 import ProjectArchive from './ProjectArchive';
 import SectionTitle from './SectionTitle';
 import Reveal from './Reveal';
@@ -169,6 +170,19 @@ const Projects = () => {
       links: {}
     },
     {
+      title: "Plataforma Civil",
+      badge: "Plataforma web · Gestión de obra MEP",
+      description: "Plataforma web para coordinar un proyecto de construcción MEP (mecánica, eléctrica y plomería) entre la contratista principal y sus subcontratistas: RFIs con responsable y fecha límite, programación semanal con avance real vs. planificado, cronogramas con Gantt y ruta crítica, licitaciones y presupuestos, control de planos por revisión, actas y mensajería. Cada empresa solo ve lo suyo. Repositorio privado; demo pública con datos de ejemplo.",
+      period: "Mayo - Junio 2025",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind"],
+      image: "/images/platform-civil/cover.webp",
+      fullColor: true,
+      caseStudy: platformCivil,
+      links: {
+        live: "https://plataforma-ing-civil.netlify.app/"
+      }
+    },
+    {
       title: "Gestión Documental BIM",
       description: "Plataforma web para equipos de construcción que centraliza el flujo de aprobación de archivos técnicos (planos, modelos, documentos). Ciclo de vida de 5 etapas con control de acceso por roles especializados (Coordinador BIM, Aprobador, Residente de obra). Modo offline-first con sincronización automática vía IndexedDB.",
       period: "Abril 2026",
@@ -245,6 +259,19 @@ const Projects = () => {
       fullColor: true,
       caseStudy: eemersonConductores,
       links: {}
+    },
+    {
+      title: "Plataforma Civil",
+      badge: "Web platform · MEP construction management",
+      description: "Web platform to coordinate an MEP (mechanical, electrical and plumbing) construction project between the main contractor and its subcontractors: RFIs with an owner and due date, weekly scheduling with actual vs. planned progress, schedules with Gantt and critical path, bidding and budgets, drawings control by revision, meeting minutes and messaging. Each company only sees its own. Private repository; public demo with sample data.",
+      period: "May - June 2025",
+      technologies: ["React", "TypeScript", "Vite", "Tailwind"],
+      image: "/images/platform-civil/cover.webp",
+      fullColor: true,
+      caseStudy: platformCivil,
+      links: {
+        live: "https://plataforma-ing-civil.netlify.app/"
+      }
     },
     {
       title: "BIM Document Management",

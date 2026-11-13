@@ -152,18 +152,6 @@ const es: MoreProject[] = [
     }
   },
   {
-    title: "Plataforma Civil",
-    category: "client",
-    description: "Sistema integral de gestión de proyectos MEP (mecánicos, eléctricos y sanitarios): control de calidad y colaboración entre equipos y subcontratistas.",
-    period: "2025 (junio)",
-    technologies: ["Web", "Gestión de proyectos"],
-    image: "/images/plataforma_civil.webp",
-    viewnow: true,
-    links: {
-      live: "http://plataforma-ing-civil.netlify.app/"
-    }
-  },
-  {
     title: "Wko Negocios",
     category: "client",
     description: "Landing page para WKO Negocios, empresa peruana que conecta a sus clientes con las mejores soluciones de conectividad: planes de internet de alta velocidad y dispositivos móviles de última generación.",
@@ -410,18 +398,6 @@ const en: MoreProject[] = [
     image: "/images/stefware.webp",
     links: {
       live: "http://stefware.netlify.app/"
-    }
-  },
-  {
-    title: "Plataforma Civil",
-    category: "client",
-    description: "Integrated MEP (mechanical, electrical, plumbing) project management system: quality control and collaboration between teams and subcontractors.",
-    period: "2025 (June)",
-    technologies: ["Web", "Gestión de proyectos"],
-    image: "/images/plataforma_civil.webp",
-    viewnow: true,
-    links: {
-      live: "http://plataforma-ing-civil.netlify.app/"
     }
   },
   {
