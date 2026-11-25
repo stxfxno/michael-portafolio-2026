@@ -121,6 +121,19 @@ const Projects = () => {
   // Datos de proyectos con traducción condicional
   const projects: Project[] = language === 'es' ? [
     {
+      title: "Repimi",
+      badge: "Startup propia · Plataforma web SaaS",
+      description: "Tienda propia con pedidos por WhatsApp para pequeños negocios de Perú (restaurantes, bodegas y emprendimientos). El cliente arma su pedido en el catálogo y lo envía al WhatsApp del negocio en un solo mensaje con total, dirección y forma de pago (Yape, Plin, transferencia o efectivo). El dueño maneja productos, stock, zonas de delivery y pedidos desde su panel; puede tener varias sedes, vender en mostrador sin conexión y subir su carta en foto o PDF para que la IA cree los productos. Cada tienda en su propio subdominio, sin comisión por venta.",
+      period: "Noviembre 2026",
+      technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Gemini API"],
+      image: "/images/repimi.webp",
+      fullColor: true,
+      viewnow: true,
+      links: {
+        live: "https://repimi.com"
+      }
+    },
+    {
       title: "Sin Propósito",
       badge: "App móvil · Android + iPhone (web)",
       description: "App móvil para cumplir tus metas de vida dividiéndolas en tareas y subtareas, limitar el tiempo en las apps que te distraen y aprovechar tus ratos libres. Lee el uso real de apps en Android con un módulo nativo en Kotlin, bloquea apps al pasar el límite, sugiere el próximo paso cuando estás libre y premia el avance con puntos, rachas y amigos. Funciona sin conexión.",
@@ -211,6 +224,19 @@ const Projects = () => {
       links: {}
     },
   ] : [
+    {
+      title: "Repimi",
+      badge: "My own startup · SaaS web platform",
+      description: "An online store with WhatsApp ordering for small businesses in Peru (restaurants, corner shops and small brands). Customers build their order in the catalog and send it to the business WhatsApp in a single message with total, address and payment method (Yape, Plin, bank transfer or cash). Owners manage products, stock, delivery zones and orders from their panel; they can run several branches, sell at the counter offline and upload their menu as a photo or PDF so AI creates the products. Every store lives on its own subdomain, with no commission per sale.",
+      period: "November 2026",
+      technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Gemini API"],
+      image: "/images/repimi.webp",
+      fullColor: true,
+      viewnow: true,
+      links: {
+        live: "https://repimi.com"
+      }
+    },
     {
       title: "Sin Propósito",
       badge: "Mobile app · Android + iPhone (web)",

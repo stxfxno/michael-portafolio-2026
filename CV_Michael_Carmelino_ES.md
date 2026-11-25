@@ -32,6 +32,13 @@ Español (nativo) • Inglés (avanzado)
 
 **EXPERIENCIA PROFESIONAL**
 
+REPIMI (STARTUP INDEPENDIENTE) — Lima, Perú
+**Fundador y Desarrollador** | Nov 2026 – Presente
+
+- Creo y opero Repimi (repimi.com): tienda propia con pedidos por WhatsApp para pequeños negocios de Perú, sin comisión por venta.
+- Desarrollo el producto completo con Next.js, TypeScript, Tailwind y Supabase: landing, panel del dueño y una tienda por subdominio en un solo deploy, con varias sedes por marca, control de stock y ventas en mostrador sin conexión.
+- Integré Google Gemini para leer la carta de un negocio desde fotos o PDF y crear sus productos y precios; llevo también precios, demos, cobros y soporte.
+
 SPRINTA AI — Lima, Perú
 **Ingeniero de Software** | Ene 2026 – Jun 2026
 **Desarrollador Full Stack** | Feb 2025 – Oct 2025
@@ -40,7 +47,7 @@ SPRINTA AI — Lima, Perú
 - Colaboré en la optimización del CRM integrado, mejorando los flujos de gestión de leads y el rendimiento general de la aplicación.
 
 EEMERSON SAC — Lima, Perú
-**Desarrollador Full Stack (Freelance)** | Oct 2025 – Feb 2026
+**Desarrollador Full Stack (Freelance)** | Oct 2025 – Oct 2026
 
 - Desarrollé PayBox (Next.js 14 + Supabase): plataforma de gestión operativa con pagos a conductores exportables a Excel, flota GPS vía Navitel y portal móvil-first con OCR automático para registro de gastos.
 - Integré la API de SUNAT vía OAuth para descarga de GRE y guías de remisión electrónicas, reduciendo el trabajo manual del equipo administrativo.
@@ -61,6 +68,9 @@ EDUCACIÓN ONLINE — Remoto
 ---
 
 **PROYECTOS DESTACADOS**
+
+**Repimi** — Next.js, TypeScript, Tailwind, Supabase, Gemini API | Nov 2026
+Startup propia: tienda online con pedidos por WhatsApp para restaurantes, bodegas y emprendimientos. Catálogo, carrito, pagos con Yape/Plin, zonas de delivery, varias sedes por marca, ventas en mostrador sin conexión y carga de la carta con IA. repimi.com
 
 **Gestión Documental BIM** — React, TypeScript, Tailwind, Supabase, IndexedDB | Abr 2026
 Plataforma web para equipos de construcción que centraliza el flujo de aprobación de archivos técnicos. Ciclo de vida de 5 etapas, control de acceso por roles especializados (Coordinador BIM, Aprobador, Residente de obra) y modo offline-first con sincronización automática vía IndexedDB.

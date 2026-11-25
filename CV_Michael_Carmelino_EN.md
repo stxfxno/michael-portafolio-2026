@@ -32,6 +32,13 @@ Spanish (native) • English (advanced)
 
 **PROFESSIONAL EXPERIENCE**
 
+REPIMI (INDEPENDENT STARTUP) — Lima, Peru
+**Founder & Developer** | Nov 2026 – Present
+
+- Build and run Repimi (repimi.com): an online store with WhatsApp ordering for small businesses in Peru, with no commission per sale.
+- Develop the full product with Next.js, TypeScript, Tailwind and Supabase: landing page, owner panel and one store per subdomain from a single deploy, with multiple branches per brand, stock control and offline counter sales.
+- Integrated Google Gemini to read a business menu from photos or a PDF and create its products and prices; also handle pricing, demos, billing and support.
+
 SPRINTA AI — Lima, Peru
 **Software Engineer** | Jan 2026 – Jun 2026
 **Full Stack Developer** | Feb 2025 – Oct 2025
@@ -40,7 +47,7 @@ SPRINTA AI — Lima, Peru
 - Collaborated on optimizing the integrated CRM, improving lead management workflows and overall application performance.
 
 EEMERSON SAC — Lima, Peru
-**Full Stack Developer (Freelance)** | Oct 2025 – Feb 2026
+**Full Stack Developer (Freelance)** | Oct 2025 – Oct 2026
 
 - Built PayBox (Next.js 14 + Supabase): an operational management platform with driver payment management exportable to Excel, GPS fleet tracking via Navitel, and a mobile-first driver portal with automatic OCR for expense tracking.
 - Integrated the SUNAT API via OAuth for downloading electronic remittance guides (GRE), reducing manual workload for the administrative team.
@@ -61,6 +68,9 @@ ONLINE EDUCATION — Remote
 ---
 
 **SELECTED PROJECTS**
+
+**Repimi** — Next.js, TypeScript, Tailwind, Supabase, Gemini API | Nov 2026
+My own startup: an online store with WhatsApp ordering for restaurants, corner shops and small brands. Catalog, cart, Yape/Plin payments, delivery zones, multiple branches per brand, offline counter sales and AI menu upload. repimi.com
 
 **BIM Document Management** — React, TypeScript, Tailwind, Supabase, IndexedDB | Apr 2026
 Web platform for construction teams centralizing the approval workflow for technical files. 5-stage lifecycle with role-based access control (BIM Coordinator, Approver, Site Resident) and offline-first mode with automatic sync via IndexedDB.

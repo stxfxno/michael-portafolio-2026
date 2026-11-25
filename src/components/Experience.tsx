@@ -8,15 +8,17 @@ interface ExperienceItem {
   companyKey: string;
   periodKey: string;
   descriptionKeys: string[];
-  type: 'fulltime' | 'freelance' | 'teaching';
+  type: 'fulltime' | 'freelance' | 'teaching' | 'startup';
   current: boolean;
   link?: string;
+  linkLabelKey?: string;
 }
 
 const typeLabel = {
   fulltime: { es: 'Tiempo completo', en: 'Full time' },
   freelance: { es: 'Freelance', en: 'Freelance' },
   teaching: { es: 'Docencia', en: 'Teaching' },
+  startup: { es: 'Startup independiente', en: 'Independent startup' },
 };
 
 const ExperienceRow = ({ experience, index }: { experience: ExperienceItem; index: number }) => {
@@ -50,7 +52,7 @@ const ExperienceRow = ({ experience, index }: { experience: ExperienceItem; inde
         </ul>
         {experience.link && (
           <a href={experience.link} target="_blank" rel="noopener noreferrer" className="link-arrow mt-6">
-            {t('experience.resources')} <ExternalLink size={13} />
+            {t(experience.linkLabelKey ?? 'experience.resources')} <ExternalLink size={13} />
           </a>
         )}
       </div>
@@ -62,6 +64,16 @@ const Experience = () => {
   const { t } = useLanguage();
 
   const experiences: ExperienceItem[] = [
+    {
+      titleKey: "experience.job6.title",
+      companyKey: "experience.job6.company",
+      periodKey: "experience.job6.period",
+      descriptionKeys: ["experience.job6.desc1", "experience.job6.desc2", "experience.job6.desc3"],
+      type: 'startup',
+      current: true,
+      link: "https://repimi.com",
+      linkLabelKey: "experience.job6.link"
+    },
     {
       titleKey: "experience.job4.title",
       companyKey: "experience.job4.company",
