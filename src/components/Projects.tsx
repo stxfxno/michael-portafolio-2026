@@ -7,6 +7,7 @@ import { hapticLearn } from '../data/hapticLearn';
 import { eemersonSoftware } from '../data/eemersonSoftware';
 import { eemersonConductores } from '../data/eemersonConductores';
 import { platformCivil } from '../data/platformCivil';
+import { repimi } from '../data/repimi';
 import ProjectArchive from './ProjectArchive';
 import SectionTitle from './SectionTitle';
 import Reveal from './Reveal';
@@ -126,8 +127,9 @@ const Projects = () => {
       description: "Tienda propia con pedidos por WhatsApp para pequeños negocios de Perú (restaurantes, bodegas y emprendimientos). El cliente arma su pedido en el catálogo y lo envía al WhatsApp del negocio en un solo mensaje con total, dirección y forma de pago (Yape, Plin, transferencia o efectivo). El dueño maneja productos, stock, zonas de delivery y pedidos desde su panel; puede tener varias sedes, vender en mostrador sin conexión y subir su carta en foto o PDF para que la IA cree los productos. Cada tienda en su propio subdominio, sin comisión por venta.",
       period: "Noviembre 2026",
       technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Gemini API"],
-      image: "/images/repimi.webp",
+      image: "/images/repimi/cover.webp",
       fullColor: true,
+      caseStudy: repimi,
       viewnow: true,
       links: {
         live: "https://repimi.com"
@@ -230,8 +232,9 @@ const Projects = () => {
       description: "An online store with WhatsApp ordering for small businesses in Peru (restaurants, corner shops and small brands). Customers build their order in the catalog and send it to the business WhatsApp in a single message with total, address and payment method (Yape, Plin, bank transfer or cash). Owners manage products, stock, delivery zones and orders from their panel; they can run several branches, sell at the counter offline and upload their menu as a photo or PDF so AI creates the products. Every store lives on its own subdomain, with no commission per sale.",
       period: "November 2026",
       technologies: ["Next.js", "TypeScript", "Tailwind", "Supabase", "Gemini API"],
-      image: "/images/repimi.webp",
+      image: "/images/repimi/cover.webp",
       fullColor: true,
+      caseStudy: repimi,
       viewnow: true,
       links: {
         live: "https://repimi.com"
